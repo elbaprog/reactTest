@@ -1,0 +1,92 @@
+import React from 'react';
+import { Link } from 'react-scroll';
+import '../style/Navbar.css';
+const Navbar = () => {
+    return (
+        <div className="navBar">
+            <ul>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="homeId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="aboutId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        About Us
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="featuresId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Features
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="servicesId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Services
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="clientsId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Clients
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="pricingId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Pricing
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="demoId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Demo
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        activeClass="active"
+                        to="contactId"
+                        spy={true}
+                        smooth={true}
+                        duration={500}>
+                        Contact
+                    </Link>
+                </li>
+            </ul>
+        </div>
+    );
+};
+export default Navbar;

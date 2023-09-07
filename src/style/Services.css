@@ -1,0 +1,77 @@
+.welcomeBanner {
+    width: 1920px;
+    height: 318px;
+    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcomeBanner h1 {
+    color: #FFF;
+    /* font-family: Poppins !important; */
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.welcomeBanner p {
+    color: #FFF;
+    /* font-family: Poppins !important; */
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #000;
+    text-align: center;
+    /* font-family: Poppins !important; */
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bolder !important;
+    line-height: 70px;
+    margin-top: 30px !important;
+}
+
+
+.services .box-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.services .box-item .icon {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+
+}
+
+.services .box-item .text {
+    flex: 1;
+
+}
+
+.services .box-item .text h4 {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 22px;
+}
+
+.services .box-item .text p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.services .row {
+    margin-left: 70px;
+    margin-top: 50px;
+}

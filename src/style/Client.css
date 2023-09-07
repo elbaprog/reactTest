@@ -1,0 +1,73 @@
+.clients {
+    background: #E0E0E0;
+    width: 1919px;
+    height: 1112px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.clients h2 {
+    color: #000;
+    /* font-family: Poppins; */
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    margin-top: 70px !important;
+}
+
+.logoContainer {
+    margin-bottom: 10px;
+}
+
+.clientsContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clientRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.clientRow p {
+    margin-top: 50px;
+    width: 561px;
+    margin-left: 50px;
+    color: #000;
+    /* font-family: Poppins; */
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.box-item {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+
+.clientRow ul {
+    margin-top: 50px;
+    width: 561px;
+    margin-left: 50px;
+    color: #000;
+    /* font-family: Poppins; */
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.pineaImg {
+    margin-left: 20%;
+    width: 250px;
+    height: 110px;
+}

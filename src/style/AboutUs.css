@@ -1,0 +1,63 @@
+/* AboutUs.css */
+.aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.aboutUsContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoContainer {
+    margin-bottom: 10px;
+}
+
+.aboutUs h2 {
+    color: #000;
+    /* font-family: Poppins; */
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+/* .medLogo {} */
+
+.titleContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center textContainer */
+}
+
+.textGroup {
+    display: flex;
+    align-items: center;
+}
+
+.textGroup h2 {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.greenText {
+    color: #63BF99;
+}
+
+.textContainer {
+    color: #000;
+    /* font-family: Poppins; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}

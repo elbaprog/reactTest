@@ -1,0 +1,31 @@
+/* Features.css */
+.item-boxes {
+    text-align: center;
+    padding: 0px 15px;
+    margin-bottom: 15px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.item-boxes h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.featuresContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
