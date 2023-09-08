@@ -62,7 +62,7 @@
 
 
 .hamburger-icon {
-    display: block;
+    /* display: block; */
     width: 25px;
     height: 3px;
     background-color: #333;
@@ -74,9 +74,9 @@
     background-color: transparent;
 }
 
-.hamburger-icon.line-1 {
+/* .hamburger-icon.line-1 {
     margin-top: 0;
-}
+} */
 
 .hamburger-icon.line-2 {
     margin-top: 5px;
@@ -116,5 +116,6 @@
 }
 
 .mobileMenuButton {
-    background: none;
+    border: none;
+    background-color: transparent;
 }
