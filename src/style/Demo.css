@@ -1,4 +1,4 @@
-.demo {
+.demo .desktopDemo {
     background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
     text-align: center;
     display: flex;
@@ -8,34 +8,48 @@
     height: 1120px;
 }
 
-.demo .row {
+.demo .mobileDemo {
+    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.demo .desktopDemo .row {
     margin-top: 50px;
 }
 
-.demo img {
+.demo .desktopDemo img {
     width: 1509px;
     height: 738px;
     margin-left: 13%;
 }
 
-.demo p {
+.demo .desktopDemo p {
     margin-top: 30px;
     max-width: 1000px;
-    /* width: 5px; */
     margin-left: 25% !important;
     color: #FFF;
     text-align: center;
-    /* font-family: Poppins; */
     font-size: 25px;
     font-style: normal;
     font-weight: 500;
     line-height: 50px;
-    /* 200% */
+
 }
 
-.demo h2 {
+.demo .mobileDemo p {
+    padding: 20px;
+
+}
+
+
+
+.demo .desktopDemo h2 {
     color: #FFF;
-    /* font-family: Poppins; */
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
@@ -45,24 +59,35 @@
 
 }
 
+.demo .mobileDemo h2 {
+    color: #FFF;
+    font-weight: 700;
+}
+
+.demo .mobileDemo p {
+    color: #FFF;
+}
+
+.demo .mobileDemo .laptop {
+    width: 450px;
+    height: 238px;
+
+}
 
 
-.demo .row {
+
+.demo .desktopDemo .row {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    /* Add spacing between the icon and heading */
 }
 
-.demoIcon {
+.desktopDemo .demoIcon {
     width: 78px !important;
     height: 71px !important;
     width: 50px;
-    /* Adjust the width as needed */
     height: auto;
-    /* Maintain aspect ratio */
-    /* margin-right: 10px; */
     margin-left: 70% !important;
-    /* Add spacing between the icon and heading */
+
 }

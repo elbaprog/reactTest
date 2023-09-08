@@ -1,4 +1,4 @@
-.contact {
+.contact .desktopContact {
     position: relative;
     /* width: 1920px;
     height: 590px; */
@@ -10,7 +10,31 @@
     width: 1920px;
 }
 
-.contact::after {
+.contact .desktopContact::after {
+    content: "";
+    background-image: url(../img/globe.png);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99999999999999999999999;
+}
+
+.contact .mobileContact {
+    position: relative;
+    /* width: 1920px;
+    height: 590px; */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    background-color: rgba(135, 192, 218, 0.4);
+    /* width: 1920px; */
+}
+
+.contact .mobileContact::after {
     content: "";
     background-image: url(../img/globe.png);
     opacity: 0.2;
@@ -63,9 +87,15 @@
 }
 
 
-.contact-block h3 {
+.desktopContact .contact-block h3 {
     margin-bottom: 30px;
     margin-left: 70%;
+}
+
+.mobileContact .contact-block h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .contact-us {
@@ -109,6 +139,12 @@
     height: 114px;
 }
 
+.mobileContact .appLogo {
+    width: 168px;
+    height: 104px;
+    margin-left: 30%;
+}
+
 .section ul {
     list-style: none;
     margin: 0;
@@ -134,4 +170,26 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+.mobileContact .row {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mobileContact {
+    padding: 20px;
+    height: 100vh;
+}
+
+.mobileContact .row .list h3 {
+
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+.mobileContact .row .list {
+    margin-top: 20px;
 }

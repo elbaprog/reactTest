@@ -114,7 +114,12 @@ const Navbar = () => {
                 <ul className={`mobileMenu ${isMobileMenuOpen ? 'active' : ''}`}>
                     <img src={logoWhite} alt="logoWhite" className='logoWhite' />
                     <li>
-                        <Link activeClass="active" to="homeId" spy={true} smooth={true} duration={500}>
+                        <Link
+                            activeClass="active"
+                            to="homeId" spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
                             Home
                         </Link>
                     </li>

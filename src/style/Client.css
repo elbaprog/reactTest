@@ -1,10 +1,20 @@
-.clients {
+.clients .desktopClients {
     background: #E0E0E0;
     width: 1919px;
     height: 1112px;
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: center; */
+}
+
+.clients .mobileClients {
+    background: #E0E0E0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
 }
 
 .clients h2 {
@@ -17,7 +27,7 @@
     margin-top: 70px !important;
 }
 
-.logoContainer {
+.desktopClients .logoContainer {
     margin-bottom: 10px;
 }
 
@@ -28,7 +38,7 @@
     align-items: center;
 }
 
-.clientRow {
+.desktopClients .clientRow {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -36,7 +46,9 @@
     margin-left: 100px;
 }
 
-.clientRow p {
+
+
+.desktopClients .clientRow p {
     margin-top: 50px;
     width: 561px;
     margin-left: 50px;
@@ -48,13 +60,24 @@
     line-height: 30px;
 }
 
-.box-item {
+/* .clientRow p {
+    margin-top: 50px;
+    width: 561px;
+    margin-left: 50px;
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+} */
+
+.desktopClients .box-item {
     width: 48%;
     margin-bottom: 20px;
 }
 
 
-.clientRow ul {
+.desktopClients .clientRow ul {
     margin-top: 50px;
     width: 561px;
     margin-left: 50px;
@@ -66,8 +89,14 @@
     line-height: 30px;
 }
 
-.pineaImg {
+.desktopClients .pineaImg {
     margin-left: 20%;
     width: 250px;
     height: 110px;
+}
+
+.mobileClients .AvicenaImg {
+    /* margin-left: 20%; */
+    width: 400px;
+    height: 80px;
 }
