@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Pricing.css'
-import PricingTable from '@aiherrera/react-pricing-table'
-import { IoCheckmark } from 'react-icons/io5'
+// import PricingTable from '@aiherrera/react-pricing-table'
+// import { IoCheckmark } from 'react-icons/io5'
 
 const Pricing = () => {
     return (

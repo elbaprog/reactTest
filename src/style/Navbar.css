@@ -43,3 +43,76 @@
     color: black !important;
 
 }
+
+.navBar .mobileMenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #63BF99;
+    z-index: 999;
+    transition: left 0.3s ease;
+
+}
+
+.navBar .mobileMenu.active {
+    left: 0;
+
+}
+
+
+.hamburger-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-icon.active {
+    background-color: transparent;
+}
+
+.hamburger-icon.line-1 {
+    margin-top: 0;
+}
+
+.hamburger-icon.line-2 {
+    margin-top: 5px;
+}
+
+.hamburger-icon.line-3 {
+    margin-top: 5px;
+}
+
+.mobileMenu li {
+    margin: 0;
+    padding: 15px 0;
+    color: #fff;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+.mobileMenu button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.logoWhite {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}

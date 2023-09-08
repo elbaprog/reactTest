@@ -1,91 +1,203 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import '../style/Navbar.css';
+import MediaQuery from 'react-responsive';
+import logoWhite from "../img/logoWhite.png";
+
 const Navbar = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <div className="navBar">
-            <ul>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="homeId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="aboutId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        About Us
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="featuresId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Features
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="servicesId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Services
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="clientsId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Clients
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="pricingId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Pricing
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="demoId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Demo
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        activeClass="active"
-                        to="contactId"
-                        spy={true}
-                        smooth={true}
-                        duration={500}>
-                        Contact
-                    </Link>
-                </li>
-            </ul>
+            <MediaQuery minDeviceWidth={768}>
+                <ul>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="homeId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="aboutId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            About Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="featuresId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Features
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="servicesId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="clientsId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Clients
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="pricingId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Pricing
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="demoId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Demo
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="contactId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+            </MediaQuery>
+
+            <MediaQuery maxDeviceWidth={767}>
+
+                <button className={`mobileMenuButton ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+                    <div className={`hamburger-icon line-1 ${isMobileMenuOpen ? 'active' : ''}`} />
+                    <div className={`hamburger-icon line-2 ${isMobileMenuOpen ? 'active' : ''}`} />
+                    <div className={`hamburger-icon line-3 ${isMobileMenuOpen ? 'active' : ''}`} />
+                    {/* {isMobileMenuOpen ? 'Close Menu' : 'Open Menu'} */}
+                </button>
+
+                <ul className={`mobileMenu ${isMobileMenuOpen ? 'active' : ''}`}>
+                    <img src={logoWhite} alt="logoWhite" className='logoWhite' />
+                    <li>
+                        <Link activeClass="active" to="homeId" spy={true} smooth={true} duration={500}>
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="aboutId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            About Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="featuresId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            Features
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="servicesId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="clientsId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            Clients
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="pricingId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            Pricing
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="demoId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            Demo
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="contactId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            onClick={closeMobileMenu}>
+                            Contact
+                        </Link>
+                    </li>
+                    <button onClick={closeMobileMenu}>X</button>
+                </ul>
+            </MediaQuery>
         </div>
     );
 };
