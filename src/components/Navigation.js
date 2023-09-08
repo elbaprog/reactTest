@@ -195,7 +195,7 @@ const Navbar = () => {
                             Contact
                         </Link>
                     </li>
-                    <button onClick={closeMobileMenu}>X</button>
+                    <button onClick={closeMobileMenu} className='close'>X</button>
                 </ul>
             </MediaQuery>
         </div>
