@@ -1,10 +1,68 @@
-import React from 'react';
-import '../style/Client.css';
+import React, { useState, useEffect } from 'react'; import '../style/Client.css';
 import medLogo from "../img/medLogo.png";
 import Avicena from "../img/avicena.png";
 import Pinea from "../img/pinea.png";
 import MediaQuery from 'react-responsive';
+import axios from 'axios';
+
+const baseURL = "http://192.168.1.41:85/api/clients";
+
 const Clients = () => {
+
+    const [clientsData, setClientsData] = useState([]);
+
+    useEffect(() => {
+        axios.get(baseURL)
+            .then((response) => {
+                const clientsInfo = response.data.clients; // Use response.data.services
+                setClientsData(clientsInfo);
+            })
+            .catch((error) => {
+                console.error('Error fetching service data:', error);
+            });
+    }, []);
+
+    if (!clientsData) return null;
+
+    const renderColumns = () => {
+        const maxColumns = 2;
+        const rows = [];
+
+        for (let i = 0; i < clientsData.length; i += maxColumns) {
+            const row = clientsData.slice(i, i + maxColumns);
+            rows.push(
+                <div className="row" key={i}>
+                    {row.map(item => (
+                        <div class="col-lg-6 col-sm-6 col-xs-12 box-item" key={item.id}>
+                            <div class="box-item">
+                                <span class="icon">
+                                    <img src={`http://192.168.1.41:85/storage/${item.image}`} alt={item.title} className='clientLogo' />
+                                </span>
+                                <div class="text">
+                                    <p>{item.description}</p>
+
+                                    <ul>
+                                        {item.contact.split('\n').map((desc, index) => (
+                                            <li key={index}>{desc.trim()}</li>
+                                        ))}
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+
+
+
+
+
+                </div>
+            );
+        }
+
+        return rows;
+    };
+
     return (
         <div className="clients" id="clientsId">
             <MediaQuery minDeviceWidth={768}>
@@ -16,37 +74,7 @@ const Clients = () => {
                         </div>
                     </div>
                     <div className="clientRow">
-                        <div class="box-item">
-                            <span class="icon">
-                                <img src={Avicena} alt="Avicena" className='AvicenaImg' />
-                            </span>
-                            <div class="text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                                <ul>
-                                    <li>Me gjithsej 26 lokacionenë Kosovë</li>
-                                    <li>0800 25 555</li>
-                                    <li>info@avicena-ks.org</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="box-item">
-                            <span class="icon">
-                                <img src={Pinea} alt="Pinea" className='pineaImg' />
-                            </span>
-                            <div class="text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                                <ul>
-                                    <li>Holger Petersen, H-89, lok 77, Pristina, Kosovo</li>
-                                    <li>048 185 185</li>
-                                    <li>info@pineagroup.com</li>
-
-                                </ul>
-
-                            </div>
-                        </div>
+                        {renderColumns()}
                     </div>
                 </div>
             </MediaQuery >
@@ -59,37 +87,7 @@ const Clients = () => {
                         </div>
                     </div>
                     <div className="clientRow">
-                        <div class="box-item">
-                            <span class="icon">
-                                <img src={Avicena} alt="Avicena" className='AvicenaImg' />
-                            </span>
-                            <div class="text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                                <ul>
-                                    <li>Me gjithsej 26 lokacionenë Kosovë</li>
-                                    <li>0800 25 555</li>
-                                    <li>info@avicena-ks.org</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <div class="box-item">
-                            <span class="icon">
-                                <img src={Pinea} alt="Pinea" className='pineaImg' />
-                            </span>
-                            <div class="text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-                                <ul>
-                                    <li>Holger Petersen, H-89, lok 77, Pristina, Kosovo</li>
-                                    <li>048 185 185</li>
-                                    <li>info@pineagroup.com</li>
-
-                                </ul>
-
-                            </div>
-                        </div>
+                        {renderColumns()}
                     </div>
                 </div>
             </MediaQuery>

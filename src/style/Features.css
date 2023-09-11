@@ -6,6 +6,7 @@
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+
 }
 
 .item-boxes h4 {
@@ -41,3 +42,13 @@
     justify-content: center;
 
 } */
+
+.desktopFeatures img {
+    width: 100px;
+    height: 100px;
+}
+
+.mobileFeatures img {
+    width: 100px;
+    height: 100px;
+}

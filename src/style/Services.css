@@ -123,3 +123,13 @@
 .services .mobileServices .row {
     padding: 20px;
 }
+
+.desktopServices img {
+    width: 150px;
+    height: 150px;
+}
+
+.mobileServices img {
+    width: 150px;
+    height: 150px;
+}
