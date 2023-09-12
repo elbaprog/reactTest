@@ -1,7 +1,7 @@
 /* Navbar.css */
 
 .navBar {
-    background: transparent;
+    background: #fff;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -21,6 +21,7 @@
 
 .navBar li {
     margin: 0 20px;
+    cursor: pointer;
 }
 
 .navBar li:last-child {
@@ -32,13 +33,10 @@
     transition: color 0.3s ease;
 }
 
-.navBar a:hover {
-    color: #63BF99;
 
-}
 
 .navBar .active {
-    color: black !important;
+    color: #63BF99 !important;
 
 }
 
@@ -49,7 +47,7 @@
     left: -100%;
     width: 80%;
     height: 100%;
-    background-color: #63BF99;
+    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
     z-index: 999;
     transition: left 0.3s ease;
 
