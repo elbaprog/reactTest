@@ -5,6 +5,7 @@ const ContactForm = () => {
         name: '',
         email: '',
         message: '',
+        phone: '',
     });
 
     const handleChange = (e) => {
@@ -21,9 +22,8 @@ const ContactForm = () => {
     return (
         <div className="contact-block">
             <form id="contactForm" onSubmit={handleSubmit}>
-                <h3>Contact Us</h3>
-                <div className="row">
-                    <div className="col-md-6">
+                <div className="row contact">
+                    <div className="col-md-12">
                         <div className="form-group">
                             <input
                                 type="text"
@@ -38,7 +38,22 @@ const ContactForm = () => {
                             <div className="help-block with-errors"></div>
                         </div>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-12">
+                        <div className="form-group">
+                            <input
+                                type="tel"
+                                className="form-control rounded-input"
+                                id="phone"
+                                name="phone"
+                                placeholder="Your Phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                            />
+                            <div className="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div className="col-md-12">
                         <div className="form-group">
                             <input
                                 type="email"
@@ -53,6 +68,7 @@ const ContactForm = () => {
                             <div className="help-block with-errors"></div>
                         </div>
                     </div>
+
                     <div className="col-md-12">
                         <div className="form-group">
                             <textarea
@@ -67,9 +83,9 @@ const ContactForm = () => {
                             ></textarea>
                             <div className="help-block with-errors"></div>
                         </div>
-                        <div className="submit-button text-center">
+                        <div className="submit-button">
                             <button className="btn btn-common rounded-button" id="submit" type="submit">
-                                Send Message
+                                SEND
                             </button>
                             <div id="msgSubmit" className="h3 text-center hidden"></div>
                             <div className="clearfix"></div>

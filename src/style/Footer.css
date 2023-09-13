@@ -1,0 +1,95 @@
+.footer .desktopFooter {
+    background-color: rgba(135, 192, 218, 0.40);
+    width: 1920px;
+    height: 134px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer .socials p {
+    font-weight: bolder;
+}
+
+.footer .socials {
+    justify-content: space-between;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.privacy h3 {
+    font-size: 30px;
+}
+
+.logo img {
+    width: 134px;
+    height: 90px;
+}
+
+/* Add this CSS inside your mobile media query (max-width: 767px) */
+.mobileFooter {
+    background-color: rgba(135, 192, 218, 0.40);
+    width: 100%;
+    /* Make the width full width of the viewport */
+    height: auto;
+    /* Let the height adjust to content */
+    text-align: center;
+    padding: 20px;
+    /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileFooter .socials {
+    margin-top: 20px;
+    /* Add margin for spacing */
+}
+
+.mobileFooter .socials p {
+    font-weight: bolder;
+    margin-bottom: 10px;
+    /* Add margin for spacing */
+}
+
+.mobileFooter .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mobileFooter .privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    /* Add margin for spacing */
+}
+
+.mobileFooter h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    /* Add margin for spacing */
+}
+
+.mobileFooter .logo img {
+    width: 134px;
+    height: 90px;
+}

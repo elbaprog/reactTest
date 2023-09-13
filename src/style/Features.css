@@ -15,15 +15,6 @@
     margin-bottom: 10px;
 }
 
-
-
-/* .desktopFeatures .features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
 .desktopFeatures .featuresContent {
     text-align: center;
     display: flex;
@@ -32,16 +23,7 @@
     justify-content: center;
 }
 
-/* .mobileFeatures .featuresContent {
-    text-align: center;
-    justify-content: center;
-} */
 
-/* .features .mobileFeatures {
-    height: 200vh;
-    justify-content: center;
-
-} */
 
 .desktopFeatures img {
     width: 100px;

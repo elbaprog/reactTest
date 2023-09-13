@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../style/Features.css';
-import EHR from "../img/EHR.png";
-import AppSchedule from "../img/AppSchedule.png";
-import Billing from "../img/Billing.png";
-import Data from "../img/Data.png";
-import Security from "../img/Security.png";
-import Twentyfour from "../img/24h.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 

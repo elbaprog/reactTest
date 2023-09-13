@@ -8,6 +8,7 @@ import Clients from './components/Clients';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Demo from './components/Demo';
+import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -23,6 +24,7 @@ const App = () => {
       <Pricing />
       <Demo />
       <Contact />
+      <Footer />
     </div>
   )
 }

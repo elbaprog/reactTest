@@ -1,79 +1,50 @@
 .contact .desktopContact {
     position: relative;
-    /* width: 1920px;
-    height: 590px; */
-    /* text-align: center; */
+    width: 1920px;
+    height: 1120px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    background-color: rgba(135, 192, 218, 0.4);
+    justify-content: center;
+    background: #E0E0E0;
     width: 1920px;
 }
 
-.contact .desktopContact::after {
-    content: "";
-    background-image: url(../img/globe.png);
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -99999999999999999999999;
-}
-
 .contact .mobileContact {
-    position: relative;
-    /* width: 1920px;
-    height: 590px; */
-    /* text-align: center; */
+    /* position: relative; */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    background-color: rgba(135, 192, 218, 0.4);
-    /* width: 1920px; */
+    justify-content: center;
+    background: #E0E0E0;
 }
-
-.contact .mobileContact::after {
-    content: "";
-    background-image: url(../img/globe.png);
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -99999999999999999999999;
-}
-
-
-/* .contact .contactForm {
-    justify-content: space-between !important;
-} */
-
 
 .rounded-input {
-    border-radius: 25px !important;
-    background: #FFF;
 
+    /* background: #FFF; */
+    background: transparent !important;
+    border-bottom: #000 !important;
     height: 59px;
 }
 
 
 .rounded-textarea {
-    border-radius: 25px !important;
-    background: #FFF;
-
-    height: 59px;
+    background: transparent !important;
+    /* background: #FFF; */
+    /* height: 59px; */
 }
 
 
 .rounded-button {
-    border-radius: 25px !important;
+    border-radius: 5px !important;
     background: #66C09E !important;
-    width: 152px !important;
-    height: 57px !important;
+    width: 80px !important;
+    /* height: 57px !important; */
     color: #FFF !important;
+    align-items: right;
+    margin-left: 80%;
+    justify-content: right !important;
+    font-weight: bolder !important;
 }
 
 
@@ -87,17 +58,6 @@
 }
 
 
-.desktopContact .contact-block h3 {
-    margin-bottom: 30px;
-    margin-left: 70%;
-}
-
-.mobileContact .contact-block h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
 .contact-us {
     /* width: 150px; komentohet */
     height: 30px;
@@ -106,90 +66,39 @@
     font-size: 25px;
     font-style: normal;
     font-weight: 500;
-    text-align: left;
-}
-
-
-.bar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.bar li {
-
-    color: #000;
-    font-weight: bold;
-    margin: 0 20px;
-}
-
-.bar li a {
-    text-decoration: none !important;
-    color: #000;
-    font-weight: bold;
-
-}
-
-.bar li:last-child {
-    margin-top: 30px;
-}
-
-.appLogo {
-    width: 168px;
-    height: 114px;
-}
-
-.mobileContact .appLogo {
-    width: 168px;
-    height: 104px;
-    margin-left: 30%;
-}
-
-.section ul {
-    list-style: none;
-    margin: 0;
-    /* komentohet padding: 0; */
-    margin-top: 160px;
-}
-
-.section li {
-
-    color: #000;
-    font-weight: bold;
-    margin: 0 20px;
-}
-
-.section li a {
-    text-decoration: none !important;
-    color: #000;
-    font-weight: bold;
-
+    padding-right: 50px;
+    padding-left: 50px;
+    /* text-align: left; */
 }
 
 .container {
     text-align: center;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
 }
 
-.mobileContact .row {
-    margin-top: 20px;
-    text-align: center;
-}
 
 .mobileContact {
     padding: 20px;
     height: 100vh;
 }
 
-.mobileContact .row .list h3 {
 
-    color: #000;
-    font-weight: bold;
-    font-size: 15px;
-
+.desktopContact .title h1 {
+    font-size: 70px;
+    font-weight: bolder;
+    text-align: right;
 }
 
-.mobileContact .row .list {
-    margin-top: 20px;
+.desktopContact .desc p {
+    padding: 20px;
+    font-size: 30px;
+    text-align: right;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ABABAB !important;
+    border-radius: 0;
+    /* Optionally remove border-radius for a flat bottom line */
 }
