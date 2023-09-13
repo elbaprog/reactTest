@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../style/Services.css';
-import Telemedicine from "../img/telemedicine.png";
-import Prescription from "../img/prescription.png";
-import Mobile from "../img/mobile.png";
-import Scalability from "../img/scalability.png";
-import Integration from "../img/integration.png";
-import Workflow from "../img/workflow.png";
-import Portal from "../img/portal.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
 const baseURL = "http://192.168.1.41:85/api/services";
+const infoURL = "http://192.168.1.41:85/api/infos";
+
 const Services = () => {
 
     const [servicesData, setServicesData] = useState([]);
+    const [infoData, setInfoData] = useState([]);
 
     useEffect(() => {
         axios.get(baseURL)
@@ -24,9 +20,18 @@ const Services = () => {
             .catch((error) => {
                 console.error('Error fetching service data:', error);
             });
+
+        axios.get(infoURL)
+            .then((response) => {
+                const info = response.data.infos;
+                setInfoData(info);
+            })
+            .catch((error) => {
+                console.error('Error fetching info data:', error);
+            });
     }, []);
 
-    if (!servicesData) return null;
+    if (!servicesData || !infoData) return null;
 
 
     const renderColumns = () => {
@@ -63,11 +68,13 @@ const Services = () => {
         <div className="services" id="servicesId">
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopServices'>
-                    <div className='welcomeBanner'>
-                        <h1>Welcome to a new era of Healthcare Management Software</h1>
-                        <p>Designed to streamline workflows, enhance patient care, and empower healthcare professionals,
-                            our software offers a comprehensive suite of features tailored to the unique needs of the healthcare industry.</p>
-                    </div>
+
+                    {infoData.length > 0 && (
+                        <div className='welcomeBanner'>
+                            <h1>{infoData[0].service_intro}</h1>
+                            <p>{infoData[0].service_description}</p>
+                        </div>
+                    )}
                     <h2>Revolutionize Healthcare Management with Our Software Application's Advanced Services</h2>
 
                     <div class="row">
@@ -77,11 +84,12 @@ const Services = () => {
             </MediaQuery >
             <MediaQuery maxDeviceWidth={767}>
                 <div className='mobileServices'>
-                    <div className='welcomeBanner'>
-                        <h1>Welcome to a new era of Healthcare Management Software</h1>
-                        <p>Designed to streamline workflows, enhance patient care, and empower healthcare professionals,
-                            our software offers a comprehensive suite of features tailored to the unique needs of the healthcare industry.</p>
-                    </div>
+                    {infoData.length > 0 && (
+                        <div className='welcomeBanner'>
+                            <h1>{infoData[0].service_intro}</h1>
+                            <p>{infoData[0].service_description}</p>
+                        </div>
+                    )}
                     <h2>Revolutionize Healthcare Management with Our Software Application's Advanced Services</h2>
 
                     <div class="row">
