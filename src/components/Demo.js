@@ -1,29 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'; import '../style/Client.css';
 import '../style/Demo.css';
 import Laptop from "../img/laptopi.png";
 import DemoIcon from "../img/demo.png";
 import MediaQuery from 'react-responsive';
+import axios from 'axios';
+
+const baseURL = "http://192.168.88.239:85/api/infos";
+
 const Demo = () => {
+
+    const [demoData, setDemoData] = useState([]);
+
+    useEffect(() => {
+        axios.get(baseURL)
+            .then((response) => {
+                const demoInfo = response.data.infos;
+                setDemoData(demoInfo);
+            })
+            .catch((error) => {
+                console.error('Error fetching service data:', error);
+            });
+    }, []);
+
+    if (!demoData) return null;
+
     return (
         <div className="demo" id="demoId">
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopDemo'>
                     <div className='row'>
-                        <div className="col-md-4 col-sm-6"><img src={DemoIcon} alt="DemoIcon" className='demoIcon' /> </div>
-                        <div className="col-md-4 col-sm-6"> <h2> Appmed Demo </h2> </div>
+                        <div className="col-md-6 col-sm-6"><img src={`http://192.168.88.239:85/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
+                        <div className="col-md-6 col-sm-6"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <img src={Laptop} alt="Laptop" />
+                    <p>{demoData.demo_description}</p>
+                    <img src={`http://192.168.88.239:85/storage/${demoData.image}`} alt="Laptop" />
                 </div>
             </MediaQuery >
             <MediaQuery maxDeviceWidth={767}>
                 <div className='mobileDemo'>
                     <div className='row'>
-                        <div className="col-md-4 col-sm-6"><img src={DemoIcon} alt="DemoIcon" className='demoIcon' /> </div>
-                        <div className="col-md-4 col-sm-6"> <h2> Appmed Demo </h2> </div>
+                        <div className="col-md-4 col-sm-6"><img src={`http://192.168.88.239:85/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
+                        <div className="col-md-4 col-sm-6"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <img src={Laptop} alt="Laptop" className='laptop' />
+                    <p>{demoData.demo_description}</p>
+                    <img src={`http://192.168.88.239:85/storage/${demoData.image}`} alt="Laptop" />
                 </div>
             </MediaQuery>
         </div>

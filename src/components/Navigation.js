@@ -76,16 +76,6 @@ const Navbar = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="pricingId"
-                            spy={true}
-                            smooth={true}
-                            duration={500}>
-                            Pricing
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            activeClass="active"
                             to="demoId"
                             spy={true}
                             smooth={true}

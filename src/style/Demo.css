@@ -23,9 +23,9 @@
 }
 
 .demo .desktopDemo img {
-    width: 1509px;
+    width: 1009px;
     height: 738px;
-    margin-left: 13%;
+    margin-left: 25%;
 }
 
 .demo .desktopDemo p {
@@ -54,7 +54,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-right: 40% !important;
+    margin-right: 60% !important;
     margin-top: 0px !important;
 
 }
@@ -77,10 +77,13 @@
 
 
 .demo .desktopDemo .row {
-    display: flex;
+    /* display: flex;
     align-items: center;
+    justify-content: center; */
+    /* margin-bottom: 20px; */
     justify-content: center;
-    margin-bottom: 20px;
+    margin-right: 80px;
+
 }
 
 .desktopDemo .demoIcon {
@@ -88,6 +91,6 @@
     height: 71px !important;
     width: 50px;
     height: auto;
-    margin-left: 70% !important;
+    margin-left: 80% !important;
 
 }

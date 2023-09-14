@@ -10,6 +10,7 @@
     transition: background-color 0.3s ease;
     display: flex;
     justify-content: left;
+    height: 70px;
 }
 
 .navBar ul {
@@ -138,6 +139,6 @@
 }
 
 .navBar .logoOfNav {
-    margin-right: 280px;
+    margin-right: 380px;
     margin-left: 100px;
 }

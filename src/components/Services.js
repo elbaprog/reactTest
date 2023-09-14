@@ -70,12 +70,11 @@ const Services = () => {
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopServices'>
 
-                    {infoData.length > 0 && (
-                        <div className='welcomeBanner'>
-                            <h1>{infoData[0].service_intro}</h1>
-                            <p>{infoData[0].service_description}</p>
-                        </div>
-                    )}
+                    <div className='welcomeBanner'>
+                        <h1>{infoData.service_intro}</h1>
+                        <p>{infoData.service_description}</p>
+                    </div>
+
                     <h2>Revolutionize Healthcare Management with Our Software Application's Advanced Services</h2>
 
                     <div class="row">
@@ -85,12 +84,12 @@ const Services = () => {
             </MediaQuery >
             <MediaQuery maxDeviceWidth={767}>
                 <div className='mobileServices'>
-                    {infoData.length > 0 && (
-                        <div className='welcomeBanner'>
-                            <h1>{infoData[0].service_intro}</h1>
-                            <p>{infoData[0].service_description}</p>
-                        </div>
-                    )}
+
+                    <div className='welcomeBanner'>
+                        <h1>{infoData.service_intro}</h1>
+                        <p>{infoData.service_description}</p>
+                    </div>
+
                     <h2>Revolutionize Healthcare Management with Our Software Application's Advanced Services</h2>
 
                     <div class="row">
