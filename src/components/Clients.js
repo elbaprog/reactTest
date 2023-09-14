@@ -5,7 +5,7 @@ import Pinea from "../img/pinea.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
-const baseURL = "http://192.168.1.41:85/api/clients";
+const baseURL = "http://192.168.88.239:85/api/clients";
 
 const Clients = () => {
 
@@ -36,7 +36,7 @@ const Clients = () => {
                         <div class="col-lg-6 col-sm-6 col-xs-12 box-item" key={item.id}>
                             <div class="box-item">
                                 <span class="icon">
-                                    <img src={`http://192.168.1.41:85/storage/${item.image}`} alt={item.title} className='clientLogo' />
+                                    <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} className='clientLogo' />
                                 </span>
                                 <div class="text">
                                     <p>{item.description}</p>

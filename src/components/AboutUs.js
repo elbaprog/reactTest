@@ -4,7 +4,7 @@ import medLogo from "../img/medLogo.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
-const baseURL = "http://192.168.1.41:85/api/abouts";
+const baseURL = "http://192.168.88.239:85/api/abouts";
 const AboutUs = () => {
 
     const [aboutData, setAboutData] = useState(

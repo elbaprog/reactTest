@@ -12,8 +12,8 @@ const Home = () => {
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopHome'>
                     <div className='text'>
-                        <h2>Software of your healthcare company is our</h2>
-                        <h1>  <TypeAnimation
+                        <h2>Software of your healthcare company</h2>
+                        <h1>  is our <TypeAnimation
                             sequence={[
                                 "Responsibility",
                                 1000,

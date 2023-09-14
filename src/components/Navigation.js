@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import '../style/Navbar.css';
 import MediaQuery from 'react-responsive';
 import logoWhite from "../img/logoWhite.png";
+import AppMed from "../img/appmed.png";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,6 +19,9 @@ const Navbar = () => {
     return (
         <div className="navBar">
             <MediaQuery minDeviceWidth={768}>
+                <div className='logoOfNav'>
+                    <img src={AppMed} alt="logo" className='navLogo' />
+                </div>
                 <ul>
                     <li>
                         <Link
@@ -98,6 +102,9 @@ const Navbar = () => {
                             duration={500}>
                             Contact
                         </Link>
+                    </li>
+                    <li>
+                        <button className='btn btn-common demo-button'>Appmed Demo</button>
                     </li>
                 </ul>
             </MediaQuery>

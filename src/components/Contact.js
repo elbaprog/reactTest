@@ -10,8 +10,6 @@ const Contact = () => {
         <div className="contact" id="contactId">
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopContact'>
-                    {/* <div class="contact-form"> */}
-
                     <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 column">
                             <ContactBar />
@@ -23,25 +21,22 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* </div> */}
                 </div>
             </MediaQuery>
             <MediaQuery maxDeviceWidth={767}>
                 <div className='mobileContact'>
-                    {/* <div class="contact-form"> */}
 
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-xs-12 column">
                             <ContactBar />
                         </div>
-                        <div class="col-12">
+                        <div class="col-xs-12 column">
                             <div class="contact-block">
                                 <ContactForm />
                             </div>
                         </div>
                     </div>
 
-                    {/* </div> */}
                 </div>
             </MediaQuery>
         </div>
