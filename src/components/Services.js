@@ -3,8 +3,8 @@ import '../style/Services.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
-const baseURL = "http://192.168.88.239:85/api/services";
-const infoURL = "http://192.168.88.239:85/api/infos";
+const baseURL = "https://progboard.app-med.com/api/services";
+const infoURL = "https://progboard.app-med.com/api/infos";
 
 
 const Services = () => {
@@ -46,7 +46,7 @@ const Services = () => {
                     {row.map(item => (
                         <div class="col-lg-6 col-sm-6 col-xs-12 box-item" key={item.id}>
                             <span class="icon">
-                                <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} />
+                                <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} />
                             </span>
                             <div class="text">
                                 <h4>{item.title}</h4>

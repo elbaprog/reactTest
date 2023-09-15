@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const baseUrl = 'http://192.168.88.239:85/api/contact';
+const baseUrl = 'https://progboard.app-med.com/api/client';
 const ContactForm = () => {
 
     const initialFormData = {

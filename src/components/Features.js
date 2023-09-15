@@ -3,7 +3,7 @@ import '../style/Features.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
-const baseURL = "http://192.168.88.239:85/api/features";
+const baseURL = "https://progboard.app-med.com/api/features";
 const Features = () => {
     const [featuresData, setFeaturesData] = useState([]);
 
@@ -36,7 +36,7 @@ const Features = () => {
                         <div className="col-md-4 col-sm-6" key={item.id}>
                             <div className="item-boxes wow fadeInDown" data-wow-delay="0.2s">
                                 <div className="icon">
-                                    <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} />
+                                    <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} />
 
                                 </div>
                                 <h4>{item.title}</h4>
