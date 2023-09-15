@@ -1,23 +1,39 @@
-import React, { useState } from 'react';
 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const baseUrl = 'http://192.168.88.239:85/api/contact';
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
+
+    const initialFormData = {
         name: '',
+        phone: '',
         email: '',
         message: '',
-        phone: '',
-    });
+        domain: window.location.hostname
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission here, e.g., send data to a server or display a confirmation message
-        console.log(formData);
+
+        try {
+            const response = await axios.post(baseUrl, formData);
+
+            console.log('Data sent successfully', response.data);
+            alert('Thank you for contacting us!');
+            setFormData(initialFormData);
+        } catch (error) {
+            console.error('Error sending data', error);
+            alert('Could not send your message. Try again!')
+        }
     };
+
 
     return (
         <div className="contact-block">

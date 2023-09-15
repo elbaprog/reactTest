@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/Contact.css';
 import ContactForm from './ContactForm';
 import ContactBar from './ContactBar';
 import MediaQuery from 'react-responsive';
-
+import axios from 'axios';
 
 const Contact = () => {
+
+
     return (
         <div className="contact" id="contactId">
             <MediaQuery minDeviceWidth={768}>
