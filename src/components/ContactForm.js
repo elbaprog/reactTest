@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const baseUrl = 'https://progboard.app-med.com/api/client';
+const baseUrl = 'https://progboard.app-med.com/api/contact';
 const ContactForm = () => {
 
     const initialFormData = {
