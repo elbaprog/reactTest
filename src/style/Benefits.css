@@ -1,0 +1,215 @@
+.desktopBenefits .welcomeBanner {
+    width: 1920px;
+    height: 318px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.desktopBenefits .welcomeBanner h1 {
+    color: #000;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.desktopBenefits .welcomeBanner p {
+    color: #000;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.mobileBenefits .welcomeBanner h1 {
+
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.mobileBenefits .welcomeBanner p {
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* .desktopBenefits h2 {
+    color: #000;
+    text-align: center;
+
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bolder !important;
+    line-height: 70px;
+    margin-top: 30px !important;
+} */
+
+/* .mobileBenefits .welcomeBanner {
+
+    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+} */
+
+/* .mobileBenefits .welcomeBanner h1 {
+    color: #FFF;
+
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.mobileBenefits .welcomeBanner p {
+    color: #FFF;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mobileBenefits h2 {
+    color: #000;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: bolder !important;
+
+    margin-top: 30px !important;
+} */
+
+
+.benefits {
+    padding: 20px;
+}
+
+.benefits .box-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.benefits .desktopBenefits .box-item .text h4 {
+    /* font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 22px; */
+    color: #000;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.benefits .desktopBenefits .box-item .text p {
+    color: #4F4F4F;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+
+
+/* 
+
+
+
+
+
+.benefits .desktopBenefits .row {
+    margin-left: 70px;
+    margin-top: 50px;
+} */
+
+/* .benefits .mobileBenefits .row {
+    padding: 20px;
+} */
+
+/* .benefits .mobileBenefits .row {
+    padding: 20px;
+} */
+
+.desktopBenefits .box-item img {
+    width: 164px;
+    height: 164px;
+}
+
+.mobileBenefits .box-item img {
+    width: 70px;
+    height: 70px;
+
+
+}
+
+.mobileBenefits .box-item {
+    border-bottom: 2px solid rgba(217, 217, 217, 0.80);
+
+}
+
+/* .mobileBenefits img {
+    width: 150px;
+    height: 150px;
+} */
+
+.benefits .row .row {
+    border-bottom: 4px solid rgba(217, 217, 217, 0.80);
+    /* background: rgba(217, 217, 217, 0.80); */
+
+}
+
+.benefits .row .row.last-row {
+    border-bottom: none;
+}
+
+.logoContainer {
+    margin-bottom: 10px;
+}
+
+.mobileBenefits .serviceButton {
+    border-radius: 50px;
+    background: linear-gradient(90deg, #63BF99 0%, #83C0D4 100%);
+    width: 200px;
+    height: 46px;
+    color: #FFF !important;
+    /* align-items: right; */
+    margin-left: 24%;
+    justify-content: center !important;
+    font-weight: bolder !important;
+    border: none;
+    margin-bottom: 50px;
+
+}
+
+.mobileBenefits h4 {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 33px;
+}
+
+.mobileBenefits ul {
+    color: #4F4F4F;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+
+}

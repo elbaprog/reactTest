@@ -29,21 +29,21 @@ const Demo = () => {
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopDemo'>
                     <div className='row'>
-                        <div className="col-md-6 col-sm-6"><img src={`https://progboard.app-med.com/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
+                        <div className="col-md-6 col-sm-6"><img src={`http://192.168.88.239:85/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
                         <div className="col-md-6 col-sm-6"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
                     <p>{demoData.demo_description}</p>
-                    <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" />
+                    <img src={`http://192.168.88.239:85/storage/${demoData.image}`} alt="Laptop" />
                 </div>
             </MediaQuery >
             <MediaQuery maxDeviceWidth={767}>
                 <div className='mobileDemo'>
                     <div className='row'>
-                        <div className="col-md-4 col-sm-6"><img src={`https://progboard.app-med.com/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
+                        <div className="col-md-4 col-sm-6"><img src={`http://192.168.88.239:85/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
                         <div className="col-md-4 col-sm-6"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
                     <p>{demoData.demo_description}</p>
-                    <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" />
+                    <img src={`http://192.168.88.239:85/storage/${demoData.image}`} alt="Laptop" />
                 </div>
             </MediaQuery>
         </div>

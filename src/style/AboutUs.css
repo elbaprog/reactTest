@@ -1,5 +1,4 @@
-/* AboutUs.css */
-.aboutUs {
+/* AboutUs.css .aboutUs {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +18,12 @@
 
 .desktopAbout .aboutUs h2 {
     color: #000;
-    /* font-family: Poppins; */
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 70px;
 }
 
-/* .medLogo {} */
 
 .desktopAbout .titleContainer {
     text-align: center;
@@ -57,7 +54,6 @@
 
 .desktopAbout .textContainer {
     color: #000;
-    /* font-family: Poppins; */
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -69,5 +65,200 @@
 
 .mobileAbout .textContainer {
     padding: 20px;
+
+} */
+
+.aboutUs {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: 100vh; */
+}
+
+.aboutUsContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobileAbout .subtitle {
+    max-width: 400px;
+    text-align: center;
+}
+
+.mobileAbout .subtitle h2 {
+    color: #63BF99 !important;
+    font-weight: 700;
+}
+
+.logoContainer {
+    margin-bottom: 10px;
+}
+
+/* .desktopAbout .aboutUs h2 {
+    color: #000;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+} */
+
+
+/* .desktopAbout .titleContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} */
+
+/* .desktopAbout .textGroup {
+    display: flex;
+    align-items: center;
+} */
+
+/* .desktopAbout .textGroup h2 {
+    margin: 0;
+    padding: 0 10px;
+} */
+
+/* .greenText {
+    color: #63BF99;
+    font-weight: bolder;
+} */
+
+/* .desktopAbout .textContainer {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+} */
+
+.desktopAbout .subtitle {
+    color: #63BF99 !important;
+    font-style: normal;
+    line-height: 70px;
+    margin: 0 !important;
+    padding: 0 10px !important;
+}
+
+.desktopAbout .subtitle h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: normal;
+    text-align: center;
+}
+
+.desktopAbout .aboutUsContent h2 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.mobileAbout .aboutUsContent h2 {
+
+    font-style: normal;
+    font-weight: 700;
+
+}
+
+.mobileAbout .aboutUsContent {
+    margin-top: 50px;
+}
+
+.desktopAbout .aboutUsDetailed {
+    margin-top: 10%;
+}
+
+.aboutUsDetailed .textOfOdd {
+    justify-content: center;
+    text-align: left;
+    margin-top: 10%;
+
+}
+
+.aboutUsDetailed .textOfOdd h2 {
+    color: #65BF9D;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    max-width: 500px;
+}
+
+.aboutUsDetailed .textOfOdd p {
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 800px;
+}
+
+.aboutUsDetailed .textOfEven {
+    justify-content: center;
+    text-align: left;
+    margin-top: 10%;
+
+}
+
+.aboutUsDetailed .textOfEven h2 {
+    color: #84C0D5;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    max-width: 500px;
+}
+
+.aboutUsDetailed .textOfEven p {
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.mobileAbout .aboutUsDetailed {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.mobileAbout .mobileText {
+    text-align: center;
+    max-width: 400px;
+    margin-top: 20px;
+    padding-left: 25px;
+
+
+}
+
+.mobileAbout .mobileText h2 {
+
+    color: #84C0D5;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.mobileAbout .mobileImage img {
+    width: 368px;
+    height: 245px;
+
+}
+
+.mobileAbout .mobileImage {
+    padding-left: 22px;
 
 }

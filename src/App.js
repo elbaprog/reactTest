@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from './components/Navigation';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
-import Features from './components/Features';
 import Services from './components/Services';
+import Benefits from './components/Benefits';
 import Clients from './components/Clients';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
@@ -18,9 +18,9 @@ const App = () => {
       <Navbar />
       <Home />
       <AboutUs />
-      <Features />
       <Services />
       <Clients />
+      <Benefits />
       <Demo />
       <Contact />
       <Footer />

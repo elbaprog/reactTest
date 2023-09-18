@@ -2,21 +2,16 @@ import React, { useState, useEffect } from 'react';
 import '../style/Services.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
-import ServiceMobile from './ServiceMobile'
 
-// const baseURL = "https://progboard.app-med.com/api/features";
 const baseURL = "http://192.168.88.239:85/api/services";
-const Services = () => {
+
+const ServiceMobile = ({ onCloseButtonClick }) => {
     const [servicesData, setServicesData] = useState([]);
 
-    const [showServiceMobile, setShowServiceMobile] = useState(false);
+    const [showServiceMobile, setShowServiceMobile] = useState(true);
 
     const handleButtonClick = () => {
-        setShowServiceMobile(true);
-    };
-
-    const handleCloseButtonClick = () => {
-        setShowServiceMobile(false); // Set to false to hide ServiceMobile
+        setShowServiceMobile(false);
     };
 
     useEffect(() => {
@@ -49,10 +44,8 @@ const Services = () => {
                             <div className="item-boxes wow fadeInDown" data-wow-delay="0.2s">
                                 <div className="icon">
                                     <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} />
-
                                 </div>
                                 <h4>{item.title}</h4>
-                                {/* <p>{item.description}</p> */}
 
                                 <ul>
                                     {item.description.split('\n').map((desc, index) => (
@@ -68,29 +61,19 @@ const Services = () => {
 
         return rows;
     };
+
     return (
         <div className="services" id="servicesId">
-            <MediaQuery minDeviceWidth={768}>
-                <div className='desktopServices'>
+            <MediaQuery maxDeviceWidth={767}>
+                <div className='mobileServices'>
                     <div className="servicesContent">
                         {renderColumns()}
                     </div>
-                </div>
+                    <button className='serviceButton' onClick={onCloseButtonClick}>Close Services</button>
+                </div >
             </MediaQuery >
-            <MediaQuery maxDeviceWidth={767}>
-                <div className='mobileServices'>
-                    {/* <div className="servicesContent">
-                        {renderColumns()}
-                    </div> */}
-                    {!showServiceMobile && (
-                        <button className='serviceButton' onClick={handleButtonClick}>Check our services</button>
-                    )}
-                    {showServiceMobile && (
-                        <ServiceMobile onCloseButtonClick={handleCloseButtonClick} />
-                    )}
-                </div>
-            </MediaQuery>
         </div >
     )
 }
-export default Services; 
+
+export default ServiceMobile;

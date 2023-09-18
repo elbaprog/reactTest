@@ -46,16 +46,6 @@ const Navbar = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="featuresId"
-                            spy={true}
-                            smooth={true}
-                            duration={500}>
-                            Features
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            activeClass="active"
                             to="servicesId"
                             spy={true}
                             smooth={true}
@@ -73,6 +63,17 @@ const Navbar = () => {
                             Clients
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            activeClass="active"
+                            to="benefitsId"
+                            spy={true}
+                            smooth={true}
+                            duration={500}>
+                            Benefits
+                        </Link>
+                    </li>
+
                     <li>
                         <Link
                             activeClass="active"
@@ -113,10 +114,10 @@ const Navbar = () => {
                     <li>
                         <Link
                             activeClass="active"
-                            to="homeId" spy={true}
+                            to="homeId"
+                            spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
+                            duration={500}>
                             Home
                         </Link>
                     </li>
@@ -126,20 +127,8 @@ const Navbar = () => {
                             to="aboutId"
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
+                            duration={500}>
                             About Us
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            activeClass="active"
-                            to="featuresId"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
-                            Features
                         </Link>
                     </li>
                     <li>
@@ -148,8 +137,7 @@ const Navbar = () => {
                             to="servicesId"
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
+                            duration={500}>
                             Services
                         </Link>
                     </li>
@@ -159,30 +147,28 @@ const Navbar = () => {
                             to="clientsId"
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
+                            duration={500}>
                             Clients
                         </Link>
                     </li>
                     <li>
                         <Link
                             activeClass="active"
-                            to="pricingId"
+                            to="benefitsId"
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
-                            Pricing
+                            duration={500}>
+                            Benefits
                         </Link>
                     </li>
+
                     <li>
                         <Link
                             activeClass="active"
                             to="demoId"
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
+                            duration={500}>
                             Demo
                         </Link>
                     </li>
@@ -192,10 +178,12 @@ const Navbar = () => {
                             to="contactId"
                             spy={true}
                             smooth={true}
-                            duration={500}
-                            onClick={closeMobileMenu}>
+                            duration={500}>
                             Contact
                         </Link>
+                    </li>
+                    <li>
+                        <button className='btn btn-common demo-button'>Appmed Demo</button>
                     </li>
                     <button onClick={closeMobileMenu} className='close'>X</button>
                 </ul>
