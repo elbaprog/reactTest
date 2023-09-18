@@ -95,7 +95,7 @@ const Benefits = () => {
 
                     {/* <h2>Revolutionize Healthcare Management with Our Software Application's Advanced benefits</h2> */}
 
-                    <div class="row">
+                    <div class="row allContent">
                         {renderColumns()}
                     </div>
                 </div>
