@@ -1,96 +1,135 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../style/Pricing.css'
 // import PricingTable from '@aiherrera/react-pricing-table'
 // import { IoCheckmark } from 'react-icons/io5'
 import MediaQuery from 'react-responsive';
 const Pricing = () => {
+    const [selectedPlan, setSelectedPlan] = useState('monthly');
+
+    const monthlyPlans = [
+        {
+            name: 'HEALTHLITE',
+            price: '249.90€',
+            description: 'This package is designed for smaller healthcare facilities and laboratories looking to streamline their operations and enhance efficiency. It provides essential features for managing patient data, appointments, and basic automation.',
+            features: [
+                'Consectetur adipiscing',
+                'Nunc luctus nulla et tellus',
+                'Suspendisse quis metus',
+                'Vestibul varius fermentum erat',
+            ],
+        },
+
+        {
+            name: 'HealthPro',
+            price: '349.90€',
+            description: 'This package is suitable for medium-sized healthcare facilities and laboratories that require advanced automation and equipment integrations. It offers robust features to optimize processes and improve patient care.',
+            features: [
+                'Consectetur adipiscing',
+                'Nunc luctus nulla et tellus',
+                'Suspendisse quis metus',
+                'Vestibul varius fermentum erat',
+            ],
+        },
+        {
+            name: 'HEALTHPLUS',
+            price: '599.90€',
+            description: 'This package is suitable to elevate your healthcare practice, a comprehensive solution offering an array of advanced features tailored to meet the demanding needs of modern medical facilities. Unlock the full potential of healthcare management with enhanced services in patient, clinical, laboratory, and departmental management.',
+            features: [
+                'Consectetur adipiscing',
+                'Nunc luctus nulla et tellus',
+                'Suspendisse quis metus',
+                'Vestibul varius fermentum erat',
+            ],
+        },
+    ];
+
+    const yearlyPlans = [
+        {
+            name: 'HEALTHLITE',
+            price: '1249.90€',
+            features: [
+                'Consectetur adipiscing',
+                'Nunc luctus nulla et tellus',
+                'Suspendisse quis metus',
+                'Vestibul varius fermentum erat',
+            ],
+        },
+        // Add more yearly plans as needed
+    ];
+
+
+    const plansToRender = selectedPlan === 'monthly' ? monthlyPlans : yearlyPlans;
+
+    const togglePlan = (planType) => {
+        setSelectedPlan(planType);
+    };
+
     return (
         <div className="pricing" id="pricingId">
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopPricing'>
                     <div id="pricing" className="section pricing-section">
                         <div className="container">
-                            <div className="section-header">
-
-                                <p className="section-subtitle">Choose A Plan That's
-                                    Right For You.</p>
+                            <div className="container1">
+                                <div className="row">
+                                    <div className="col-md-8">
+                                        <div className="section-header">
+                                            <p className="section-subtitle">Choose A Plan That's Right For You.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="toggle-buttons decidePlan">
+                                            <button
+                                                className={`toggle-button ${selectedPlan === 'monthly' ? 'active' : ''} monthly`}
+                                                onClick={() => togglePlan('monthly')}
+                                            >
+                                                Monthly
+                                            </button>
+                                            <button
+                                                className={`toggle-button ${selectedPlan === 'yearly' ? 'active' : ''} yearly`}
+                                                onClick={() => togglePlan('yearly')}
+                                            >
+                                                Yearly
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
+
                             <div className="row pricing-tables">
-                                <div className="col-md-4 col-sm-6 col-xs-12">
-                                    <div className="pricing-table">
-                                        <div className="pricing-details">
-                                            <h3>HEALTHLITE</h3>
-                                            <p>This package is designed for smaller healthcare facilities and laboratories looking to streamline their operations and enhance efficiency. It provides essential features for managing patient data, appointments, and basic
-                                                automation.</p>
-                                            <h1 data-before="249.90€"></h1>
-                                            <div className="plan-button">
-                                                <a href="#" class="btn btn-common">Get Plan</a>
+                                {plansToRender.map((plan, index) => (
+                                    <div key={index} className="col-md-4 col-sm-6 col-xs-12">
+                                        <div className="pricing-table">
+                                            <div className={`pricing-details ${plan.name.toLowerCase()}`}>
+                                                <h3>{plan.name}</h3>
+                                                <p>{plan.description}.</p>
+                                                <h1 data-before={plan.price}></h1>
+                                                <div className={`plan-button ${plan.name.toLowerCase()}-button`}>
+                                                    <a href="#" className="btn btn-common">
+                                                        Get Plan
+                                                    </a>
+                                                </div>
+                                                <span>Top Features</span>
+                                                <ul>
+                                                    {plan.features.map((feature, featureIndex) => (
+                                                        <li key={featureIndex} className="check-icon">
+                                                            {feature}
+                                                        </li>
+                                                    ))}
+                                                </ul>
                                             </div>
-                                            <span>Top Features</span>
-                                            <ul>
-                                                <li class="check-icon">Consectetur adipiscing</li>
-                                                <li class="check-icon">Nunc luctus nulla et tellus</li>
-                                                <li class="check-icon">Suspendisse quis metus</li>
-                                                <li class="check-icon">Vestibul varius fermentum erat</li>
-                                            </ul>
-
-                                            {/* <h3>200$</h3>
-                                            <span>BASIC</span>
-                                            <ul>
-                                                <li>Consectetur adipiscing</li>
-                                                <li>Nunc luctus nulla et tellus</li>
-                                                <li>Suspendisse quis metus</li>
-                                                <li>Vestibul varius fermentum erat</li>
-                                            </ul>
-                                        </div>
-                                        <div className="plan-button">
-                                    <a href="#" class="btn btn-common">Get Plan</a> */}
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="pricing-table">
-                                        <div class="pricing-details">
-                                            <h3>500$</h3>
-                                            <span>ADVANCED</span>
-                                            <ul>
-                                                <li>Consectetur adipiscing</li>
-                                                <li>Nunc luctus nulla et tellus</li>
-                                                <li>Suspendisse quis metus</li>
-                                                <li>Vestibul varius fermentum erat</li>
-                                            </ul>
-                                        </div>
-                                        {/* <div class="plan-button">
-                                    <a href="#" class="btn btn-common">Buy Now</a>
-                                </div> */}
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="pricing-table">
-                                        <div class="pricing-details">
-                                            <h3>800$</h3>
-                                            <span>Team</span>
-                                            <ul>
-                                                <li>Consectetur adipiscing</li>
-                                                <li>Nunc luctus nulla et tellus</li>
-                                                <li>Suspendisse quis metus</li>
-                                                <li>Vestibul varius fermentum erat</li>
-                                            </ul>
-                                        </div>
-                                        {/* <div class="plan-button">
-                                    <a href="#" class="btn btn-common">Buy Now</a>
-                                </div> */}
-                                    </div>
-                                </div>
-
+                                ))}
                             </div>
                         </div>
                     </div>
                 </div>
             </MediaQuery >
+
+
+
             <MediaQuery maxDeviceWidth={767}>
                 <div className='mobilePricing'>
                     <div id="pricing" className="section pricing-section">

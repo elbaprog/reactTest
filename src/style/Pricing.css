@@ -25,7 +25,20 @@
 
 }
 
-.pricing-table .pricing-details h3 {
+
+.pricing-table .pricing-details p {
+    color: #000;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 10px;
+    padding-right: 30px;
+    height: 250px;
+}
+
+
+.healthlite h3 {
     font-size: 50px;
     font-weight: 700;
     /* margin-bottom: 20px; */
@@ -44,20 +57,9 @@
 
 }
 
-.pricing-table .pricing-details p {
-    color: #000;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    margin-left: 10px;
-
-    padding-right: 30px;
-}
 
 
-
-.pricing-table .pricing-details h1 {
+.healthlite h1 {
     color: #EFAC5D;
     font-size: 80px;
     font-style: normal;
@@ -68,7 +70,9 @@
 
 }
 
-.pricing-table .pricing-details h1::before {
+
+
+.healthlite h1::before {
     content: attr(data-before);
     color: #EFAC5D;
     font-size: 80px;
@@ -87,6 +91,7 @@
 
 }
 
+
 .pricing-table .pricing-details span {
     color: #000;
     font-size: 25px;
@@ -94,8 +99,17 @@
     font-weight: 600;
     line-height: 70px;
     padding-left: 30px;
-
 }
+
+/* .pricing-table .pricing-details span {
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 30px;
+
+} */
 
 
 
@@ -123,7 +137,7 @@
     margin-bottom: 10px;
 }
 
-.plan-button {
+.healthlite .plan-button {
     width: 350px;
     height: 88px;
     border-radius: 43px;
@@ -147,7 +161,153 @@
     font-style: normal;
     font-weight: 700;
     line-height: 70px;
-    max-width: 900px;
+    /* max-width: 900px; */
     margin-bottom: 50px;
     margin-left: 15px;
+}
+
+.decidePlan {
+    width: 404px;
+    height: 113px;
+    border-radius: 17px;
+    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 15%;
+}
+
+.decidePlan .monthly {
+    width: 179px;
+    height: 79px;
+    border-radius: 17px;
+    background: #FFF;
+    border: none;
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+
+}
+
+.decidePlan .yearly {
+    width: 179px;
+    height: 79px;
+    border-radius: 17px;
+    border: 2px solid #FFF;
+    background: #83C0D8;
+    justify-content: center;
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+
+}
+
+.healthpro h3 {
+    font-size: 50px;
+    font-weight: 700;
+    /* margin-bottom: 20px; */
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-left: 30px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    color: #63BF99;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+
+
+.healthpro h1 {
+    color: #63BF99;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 30px;
+
+
+}
+
+
+
+.healthpro h1::before {
+    content: attr(data-before);
+    color: #63BF99;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.healthpro .plan-button {
+    width: 350px;
+    height: 88px;
+    border-radius: 43px;
+    background: linear-gradient(50deg, #63BF99 32.09%, #FFF 166.03%);
+    margin-left: 30px;
+
+}
+
+.healthplus h3 {
+    font-size: 50px;
+    font-weight: 700;
+    /* margin-bottom: 20px; */
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-left: 30px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    color: #84C0D5;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+
+
+.healthplus h1 {
+    color: #84C0D5;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 30px;
+
+
+}
+
+
+
+.healthplus h1::before {
+    content: attr(data-before);
+    color: #84C0D5;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.healthplus .plan-button {
+    width: 350px;
+    height: 88px;
+    border-radius: 43px;
+    background: linear-gradient(50deg, #84C0D5 32.09%, #FFF 166.03%);
+
+    margin-left: 30px;
+
 }
