@@ -11,7 +11,6 @@ const Pricing = () => {
                     <div id="pricing" className="section pricing-section">
                         <div className="container">
                             <div className="section-header">
-                                <h2 className="section-title">Pricing Table</h2>
 
                                 <p className="section-subtitle">Choose A Plan That's
                                     Right For You.</p>
@@ -21,7 +20,22 @@ const Pricing = () => {
                                 <div className="col-md-4 col-sm-6 col-xs-12">
                                     <div className="pricing-table">
                                         <div className="pricing-details">
-                                            <h3>200$</h3>
+                                            <h3>HEALTHLITE</h3>
+                                            <p>This package is designed for smaller healthcare facilities and laboratories looking to streamline their operations and enhance efficiency. It provides essential features for managing patient data, appointments, and basic
+                                                automation.</p>
+                                            <h1 data-before="249.90€"></h1>
+                                            <div className="plan-button">
+                                                <a href="#" class="btn btn-common">Get Plan</a>
+                                            </div>
+                                            <span>Top Features</span>
+                                            <ul>
+                                                <li class="check-icon">Consectetur adipiscing</li>
+                                                <li class="check-icon">Nunc luctus nulla et tellus</li>
+                                                <li class="check-icon">Suspendisse quis metus</li>
+                                                <li class="check-icon">Vestibul varius fermentum erat</li>
+                                            </ul>
+
+                                            {/* <h3>200$</h3>
                                             <span>BASIC</span>
                                             <ul>
                                                 <li>Consectetur adipiscing</li>
@@ -30,9 +44,9 @@ const Pricing = () => {
                                                 <li>Vestibul varius fermentum erat</li>
                                             </ul>
                                         </div>
-                                        {/* <div className="plan-button">
-                                    <a href="#" class="btn btn-common">Get Plan</a>
-                                </div> */}
+                                        <div className="plan-button">
+                                    <a href="#" class="btn btn-common">Get Plan</a> */}
+                                        </div>
                                     </div>
                                 </div>
 

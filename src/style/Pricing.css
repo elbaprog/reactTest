@@ -1,25 +1,26 @@
 .desktopPricing .pricing-table {
     padding: 0px 0px 40px 0px;
-    margin: 0 auto;
-    margin-bottom: 5px;
-    border: transparent;
-    text-align: center;
+    /* margin: 0 auto; */
+    /* margin-bottom: 5px; */
+    /* border: transparent; */
+    /* text-align: center; */
     background-color: #FFFFFF;
-    border: 1px solid #f1f1f1;
+    /* border: 1px solid #f1f1f1; */
     transition: all 0.3s;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+
+    border-radius: 35px;
+    border: 5px solid #66C09F;
+    background: #FFF;
+    /* box-shadow: 30px 20px 10px 0px #86C0D8; */
+    width: 480px;
+    height: 1370px;
+    margin: 0 10px;
+    /* Adjust the margin value as needed */
+
 
 }
 
 .mobilePricing .pricing-table {
-    /* padding: 0px 0px 40px 0px;
-    margin: 0 auto;
-    margin-bottom: 5px;
-    border: transparent;
-    text-align: center;
-    background-color: #FFFFFF;
-    border: 1px solid #f1f1f1;
-    transition: all 0.3s; */
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 
 }
@@ -27,38 +28,126 @@
 .pricing-table .pricing-details h3 {
     font-size: 50px;
     font-weight: 700;
-    color: #fff;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-transform: uppercase;
-    background: #78e4b7;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-left: 30px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
-    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
+    color: #EFAC5D;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+.pricing-table .pricing-details p {
+    color: #000;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 10px;
+
+    padding-right: 30px;
+}
+
+
+
+.pricing-table .pricing-details h1 {
+    color: #EFAC5D;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 30px;
+
+
+}
+
+.pricing-table .pricing-details h1::before {
+    content: attr(data-before);
+    color: #EFAC5D;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.pricing-table .pricing-details h1::after {
+    content: "/mo";
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
 
 }
 
 .pricing-table .pricing-details span {
-    display: inline-block;
+    color: #000;
     font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 30px;
+
+}
+
+
+
+.desktopPricing .pricing-section {
+    height: 1570px;
 }
 
 .pricing-table .pricing-details ul {
     margin-bottom: 35px;
+    list-style-type: none;
+
 }
 
 .pricing-table .pricing-details ul li {
-    padding: 10px;
+    color: #000;
     font-size: 15px;
-    border-bottom: 1px dotted #f1f1f1;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    background-image: url('../img/check.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+    margin-bottom: 10px;
 }
 
-.table-left {
-    margin-top: 20px;
+.plan-button {
+    width: 350px;
+    height: 88px;
+    border-radius: 43px;
+    background: linear-gradient(50deg, #EFAC5D 32.09%, #FFF 166.03%);
+    margin-left: 30px;
+
 }
 
-.desktopPricing .pricing-section {
-    height: 100vh;
+.plan-button a {
+    color: #FFF;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+    margin-left: 25%;
+}
+
+.section-subtitle {
+    color: #000;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    max-width: 900px;
+    margin-bottom: 50px;
+    margin-left: 15px;
 }
