@@ -3,7 +3,7 @@ import '../style/Services.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
-const baseURL = "http://192.168.88.239:85/api/services";
+const baseURL = "https://progboard.app-med.com/api/services";
 
 const ServiceMobile = ({ onCloseButtonClick }) => {
     const [servicesData, setServicesData] = useState([]);
@@ -43,7 +43,7 @@ const ServiceMobile = ({ onCloseButtonClick }) => {
                         <div className="col-md-3 col-sm-4" key={item.id}>
                             <div className="item-boxes wow fadeInDown" data-wow-delay="0.2s">
                                 <div className="icon">
-                                    <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} />
+                                    <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} />
                                 </div>
                                 <h4>{item.title}</h4>
 

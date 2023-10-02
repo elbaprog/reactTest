@@ -26,7 +26,7 @@
 }
 
 
-.pricing-table .pricing-details p {
+.pricing-table .pricing-details .descriptionP {
     color: #000;
     font-size: 17px;
     font-style: normal;
@@ -35,6 +35,17 @@
     margin-left: 10px;
     padding-right: 30px;
     height: 250px;
+}
+
+.pricing-table .pricing-details .subscriptionP {
+    color: #7C7C7C;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin-left: 10px;
+    padding-right: 30px;
+
 }
 
 
@@ -135,6 +146,7 @@
     background-position: left center;
     padding-left: 30px;
     margin-bottom: 10px;
+    display: flex;
 }
 
 .healthlite .plan-button {
@@ -143,6 +155,7 @@
     border-radius: 43px;
     background: linear-gradient(50deg, #EFAC5D 32.09%, #FFF 166.03%);
     margin-left: 30px;
+    margin-top: 40px;
 
 }
 
@@ -153,6 +166,7 @@
     font-weight: 600;
     line-height: 70px;
     margin-left: 25%;
+
 }
 
 .section-subtitle {
@@ -256,7 +270,7 @@
     border-radius: 43px;
     background: linear-gradient(50deg, #63BF99 32.09%, #FFF 166.03%);
     margin-left: 30px;
-
+    margin-top: 40px;
 }
 
 .healthplus h3 {
@@ -307,7 +321,7 @@
     height: 88px;
     border-radius: 43px;
     background: linear-gradient(50deg, #84C0D5 32.09%, #FFF 166.03%);
-
+    margin-top: 40px;
     margin-left: 30px;
 
 }
@@ -349,7 +363,7 @@
 
 li.check-icon {
     position: relative;
-    display: inline-flex;
+    /* display: inline-flex; */
 
 }
 
@@ -364,7 +378,7 @@ li.check-icon {
     transform: translateY(-50%);
     width: 200px;
     display: none;
-    left: 100%;
+    left: 62%;
 }
 
 .show-popup {
@@ -377,7 +391,6 @@ li.check-icon {
     height: 25px;
     fill: #FFF;
     stroke-width: 1px;
-
     border-color: #84C0D5;
     background: none !important;
     border-radius: 50%;

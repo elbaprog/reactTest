@@ -3,8 +3,8 @@ import '../style/Benefits.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 
-const baseURL = "http://192.168.88.239:85/api/benefits";
-const infoURL = "http://192.168.88.239:85/api/infos";
+const baseURL = "https://progboard.app-med.com/api/benefits";
+const infoURL = "https://progboard.app-med.com/api/infos";
 
 const BenefitMobile = ({ onCloseButtonClick }) => {
     const [benefitsData, setBenefitsData] = useState([]);
@@ -50,7 +50,7 @@ const BenefitMobile = ({ onCloseButtonClick }) => {
                     {row.map(item => (
                         <div class="col-lg-4 col-sm-4 col-xs-6 box-item" key={item.id}>
                             <span class="icon">
-                                <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} />
+                                <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} />
                             </span>
                             <div class="text">
                                 <h4>{item.title}</h4>

@@ -5,10 +5,10 @@ import axios from 'axios';
 import medLogo from "../img/medLogo.png";
 import BenefitMobile from './BenefitMobile'
 
-// const baseURL = "https://progboard.app-med.com/api/benefits";
-// const infoURL = "https://progboard.app-med.com/api/infos";
-const baseURL = "http://192.168.88.239:85/api/benefits";
-const infoURL = "http://192.168.88.239:85/api/infos";
+const baseURL = "https://progboard.app-med.com/api/benefits";
+const infoURL = "https://progboard.app-med.com/api/infos";
+// const baseURL = "http://192.168.1.48:8005/api/benefits";
+// const infoURL = "http://192.168.1.48:8005//api/infos";
 
 
 const Benefits = () => {
@@ -24,12 +24,12 @@ const Benefits = () => {
     };
 
     const handleCloseButtonClick = () => {
-        setShowBenefitMobile(false); // Set to false to hide BenefitMobile
+        setShowBenefitMobile(false);
     };
     useEffect(() => {
         axios.get(baseURL)
             .then((response) => {
-                const benefitsInfo = response.data.benefits; // Use response.data.benefits
+                const benefitsInfo = response.data.benefits;
                 setBenefitsData(benefitsInfo);
             })
             .catch((error) => {
@@ -61,7 +61,7 @@ const Benefits = () => {
                     {row.map(item => (
                         <div class="col-lg-4 col-sm-4 col-xs-6 box-item" key={item.id}>
                             <span class="icon">
-                                <img src={`http://192.168.88.239:85/storage/${item.image}`} alt={item.title} />
+                                <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} />
                             </span>
                             <div class="text">
                                 <h4>{item.title}</h4>

@@ -14,7 +14,7 @@ const Clients = () => {
     useEffect(() => {
         axios.get(baseURL)
             .then((response) => {
-                const clientsInfo = response.data.clients; // Use response.data.services
+                const clientsInfo = response.data.clients;
                 setClientsData(clientsInfo);
             })
             .catch((error) => {

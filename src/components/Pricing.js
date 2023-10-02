@@ -2,18 +2,24 @@ import React, { useState, useRef, useEffect } from 'react';
 import '../style/Pricing.css'
 import MediaQuery from 'react-responsive';
 const Pricing = () => {
+    const [data, setData] = useState([]);
     const [selectedPlan, setSelectedPlan] = useState('monthly');
     const [clickedFeature, setClickedFeature] = useState(null);
     const featureRef = useRef([]);
 
+    const baseURL = "https://progboard.app-med.com/api/pricings";
 
-    // const handleFeatureClick = (index) => {
-    //     if (clickedFeature === index) {
-    //         setClickedFeature(null);
-    //     } else {
-    //         setClickedFeature(index);
-    //     }
-    // }
+
+    useEffect(() => {
+        fetch(baseURL)
+            .then(response => response.json())
+            .then(result => {
+                if (result.status) {
+                    setData(result.pricings);
+                }
+            })
+            .catch(err => console.error(err));
+    }, []);
 
     const handleFeatureClick = (planIndex, featureIndex) => {
         const key = `${planIndex}-${featureIndex}`;
@@ -23,98 +29,9 @@ const Pricing = () => {
             setClickedFeature(key);
         }
     }
-    const monthlyPlans = [
-        {
-            name: 'HEALTHLITE',
-            price: '249.90€',
-            description: 'This package is designed for smaller healthcare facilities and laboratories looking to streamline their operations and enhance efficiency. It provides essential features for managing patient data, appointments, and basic automation.',
-            features: [
-                {
-                    name: 'Consectetur adipiscing',
-                    description: 'Detailed description of Consectetur adipiscing.'
-                },
-                {
-                    name: 'Nunc luctus nulla et tellus',
-                    description: 'Detailed description of Nunc luctus nulla et tellus.'
-                },
-                {
-                    name: 'Suspendisse quis metus',
-                    description: 'Detailed description of Consectetur adipiscing.'
-                },
-                {
-                    name: 'Vestibul varius fermentum erat',
-                    description: 'Detailed description of Nunc luctus nulla et tellus.'
-                },
-
-            ],
-        },
-
-        {
-            name: 'HealthPro',
-            price: '349.90€',
-            description: 'This package is suitable for medium-sized healthcare facilities and laboratories that require advanced automation and equipment integrations. It offers robust features to optimize processes and improve patient care.',
-            features: [
-                {
-                    name: 'Consectetur adipiscing',
-                    description: 'Detailed description of Consectetur adipiscing.'
-                },
-                {
-                    name: 'Nunc luctus nulla et tellus',
-                    description: 'Detailed description of Nunc luctus nulla et tellus.'
-                },
-                {
-                    name: 'Suspendisse quis metus',
-                    description: 'Detailed description of Consectetur adipiscing.'
-                },
-                {
-                    name: 'Vestibul varius fermentum erat',
-                    description: 'Detailed description of Nunc luctus nulla et tellus.'
-                },
-
-            ],
-        },
-        {
-            name: 'HEALTHPLUS',
-            price: '599.90€',
-            description: 'This package is suitable to elevate your healthcare practice, a comprehensive solution offering an array of advanced features tailored to meet the demanding needs of modern medical facilities. Unlock the full potential of healthcare management with enhanced services in patient, clinical, laboratory, and departmental management.',
-            features: [
-                {
-                    name: 'Consectetur adipiscing',
-                    description: 'Detailed description of Consectetur adipiscing.'
-                },
-                {
-                    name: 'Nunc luctus nulla et tellus',
-                    description: 'Detailed description of Nunc luctus nulla et tellus.'
-                },
-                {
-                    name: 'Suspendisse quis metus',
-                    description: 'Detailed description of Consectetur adipiscing.'
-                },
-                {
-                    name: 'Vestibul varius fermentum erat',
-                    description: 'Detailed description of Nunc luctus nulla et tellus.'
-                },
-
-            ],
-        },
-    ];
-
-    const yearlyPlans = [
-        {
-            name: 'HEALTHLITE',
-            price: '1249.90€',
-            features: [
-                'Consectetur adipiscing',
-                'Nunc luctus nulla et tellus',
-                'Suspendisse quis metus',
-                'Vestibul varius fermentum erat',
-            ],
-        },
-        // Add more yearly plans as needed
-    ];
 
 
-    const plansToRender = selectedPlan === 'monthly' ? monthlyPlans : yearlyPlans;
+    const plansToRender = data.filter(plan => plan.plan.toLowerCase() === selectedPlan);
 
     const togglePlan = (planType) => {
         setSelectedPlan(planType);
@@ -169,38 +86,49 @@ const Pricing = () => {
                                 {plansToRender.map((plan, index) => (
                                     <div key={index} className="col-md-4 col-sm-6 col-xs-12">
                                         <div className="pricing-table">
-                                            <div className={`pricing-details ${plan.name.toLowerCase()}`}>
-                                                <h3>{plan.name}</h3>
-                                                <p>{plan.description}.</p>
-                                                <h1 data-before={plan.price}></h1>
-                                                <div className={`plan-button ${plan.name.toLowerCase()}-button`}>
+                                            <div className={`pricing-details ${plan.title.toLowerCase()}`}>
+                                                <h3>{plan.title}</h3>
+                                                <p className='descriptionP'>{plan.description}.</p>
+                                                <h1 data-before={`${plan.pricing}€`}></h1>
+                                                <div className='subscriptionP'>
+                                                    {plan.subscription.split("\n").map((line, idx) => (
+                                                        <p key={idx}>{line}</p>
+                                                    ))}
+                                                </div>
+
+                                                <div className={`plan-button ${plan.title.toLowerCase()}-button`}>
                                                     <a href="#" className="btn btn-common">
                                                         Get Plan
                                                     </a>
                                                 </div>
                                                 <span>Top Features</span>
                                                 <ul>
-                                                    {plan.features.map((feature, featureIndex) => (
+                                                    {plan.pricefeature.map((feature, featureIndex) => (
                                                         <li key={featureIndex} className="check-icon" ref={el => featureRef.current[`${index}-${featureIndex}`] = el}>
-                                                            {feature.name}
-                                                            <button className='descButton'
-                                                                onClick={() => handleFeatureClick(index, featureIndex)}
-                                                            >
-                                                                ?
-                                                            </button>
+                                                            {feature.fp_title}
+
+                                                            {feature.fp_description !== "No Description" && (
+                                                                <button className='descButton'
+                                                                    onClick={() => handleFeatureClick(index, featureIndex)}
+                                                                >
+                                                                    ?
+                                                                </button>
+                                                            )}
+
                                                             {clickedFeature === `${index}-${featureIndex}` && (
                                                                 <div className="feature-popup show-popup">
-                                                                    {feature.description}
+                                                                    {feature.fp_description}
                                                                 </div>
                                                             )}
                                                         </li>
                                                     ))}
-                                                </ul>
 
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 ))}
+
                             </div>
                         </div>
                     </div>
@@ -233,9 +161,7 @@ const Pricing = () => {
                                                 <li>Vestibul varius fermentum erat</li>
                                             </ul>
                                         </div>
-                                        {/* <div className="plan-button">
-                                    <a href="#" class="btn btn-common">Get Plan</a>
-                                </div> */}
+
                                     </div>
                                 </div>
 
@@ -251,9 +177,7 @@ const Pricing = () => {
                                                 <li>Vestibul varius fermentum erat</li>
                                             </ul>
                                         </div>
-                                        {/* <div class="plan-button">
-                                    <a href="#" class="btn btn-common">Buy Now</a>
-                                </div> */}
+
                                     </div>
                                 </div>
 
@@ -269,9 +193,7 @@ const Pricing = () => {
                                                 <li>Vestibul varius fermentum erat</li>
                                             </ul>
                                         </div>
-                                        {/* <div class="plan-button">
-                                    <a href="#" class="btn btn-common">Buy Now</a>
-                                </div> */}
+
                                     </div>
                                 </div>
 
