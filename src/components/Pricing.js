@@ -1,21 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../style/Pricing.css'
-// import PricingTable from '@aiherrera/react-pricing-table'
-// import { IoCheckmark } from 'react-icons/io5'
 import MediaQuery from 'react-responsive';
 const Pricing = () => {
     const [selectedPlan, setSelectedPlan] = useState('monthly');
+    const [clickedFeature, setClickedFeature] = useState(null);
+    const featureRef = useRef([]);
 
+
+    // const handleFeatureClick = (index) => {
+    //     if (clickedFeature === index) {
+    //         setClickedFeature(null);
+    //     } else {
+    //         setClickedFeature(index);
+    //     }
+    // }
+
+    const handleFeatureClick = (planIndex, featureIndex) => {
+        const key = `${planIndex}-${featureIndex}`;
+        if (clickedFeature === key) {
+            setClickedFeature(null);
+        } else {
+            setClickedFeature(key);
+        }
+    }
     const monthlyPlans = [
         {
             name: 'HEALTHLITE',
             price: '249.90€',
             description: 'This package is designed for smaller healthcare facilities and laboratories looking to streamline their operations and enhance efficiency. It provides essential features for managing patient data, appointments, and basic automation.',
             features: [
-                'Consectetur adipiscing',
-                'Nunc luctus nulla et tellus',
-                'Suspendisse quis metus',
-                'Vestibul varius fermentum erat',
+                {
+                    name: 'Consectetur adipiscing',
+                    description: 'Detailed description of Consectetur adipiscing.'
+                },
+                {
+                    name: 'Nunc luctus nulla et tellus',
+                    description: 'Detailed description of Nunc luctus nulla et tellus.'
+                },
+                {
+                    name: 'Suspendisse quis metus',
+                    description: 'Detailed description of Consectetur adipiscing.'
+                },
+                {
+                    name: 'Vestibul varius fermentum erat',
+                    description: 'Detailed description of Nunc luctus nulla et tellus.'
+                },
+
             ],
         },
 
@@ -24,10 +54,23 @@ const Pricing = () => {
             price: '349.90€',
             description: 'This package is suitable for medium-sized healthcare facilities and laboratories that require advanced automation and equipment integrations. It offers robust features to optimize processes and improve patient care.',
             features: [
-                'Consectetur adipiscing',
-                'Nunc luctus nulla et tellus',
-                'Suspendisse quis metus',
-                'Vestibul varius fermentum erat',
+                {
+                    name: 'Consectetur adipiscing',
+                    description: 'Detailed description of Consectetur adipiscing.'
+                },
+                {
+                    name: 'Nunc luctus nulla et tellus',
+                    description: 'Detailed description of Nunc luctus nulla et tellus.'
+                },
+                {
+                    name: 'Suspendisse quis metus',
+                    description: 'Detailed description of Consectetur adipiscing.'
+                },
+                {
+                    name: 'Vestibul varius fermentum erat',
+                    description: 'Detailed description of Nunc luctus nulla et tellus.'
+                },
+
             ],
         },
         {
@@ -35,10 +78,23 @@ const Pricing = () => {
             price: '599.90€',
             description: 'This package is suitable to elevate your healthcare practice, a comprehensive solution offering an array of advanced features tailored to meet the demanding needs of modern medical facilities. Unlock the full potential of healthcare management with enhanced services in patient, clinical, laboratory, and departmental management.',
             features: [
-                'Consectetur adipiscing',
-                'Nunc luctus nulla et tellus',
-                'Suspendisse quis metus',
-                'Vestibul varius fermentum erat',
+                {
+                    name: 'Consectetur adipiscing',
+                    description: 'Detailed description of Consectetur adipiscing.'
+                },
+                {
+                    name: 'Nunc luctus nulla et tellus',
+                    description: 'Detailed description of Nunc luctus nulla et tellus.'
+                },
+                {
+                    name: 'Suspendisse quis metus',
+                    description: 'Detailed description of Consectetur adipiscing.'
+                },
+                {
+                    name: 'Vestibul varius fermentum erat',
+                    description: 'Detailed description of Nunc luctus nulla et tellus.'
+                },
+
             ],
         },
     ];
@@ -63,6 +119,18 @@ const Pricing = () => {
     const togglePlan = (planType) => {
         setSelectedPlan(planType);
     };
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (clickedFeature !== null && !featureRef.current[clickedFeature].contains(event.target)) {
+                setClickedFeature(null);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [clickedFeature]);
+
 
     return (
         <div className="pricing" id="pricingId">
@@ -113,11 +181,22 @@ const Pricing = () => {
                                                 <span>Top Features</span>
                                                 <ul>
                                                     {plan.features.map((feature, featureIndex) => (
-                                                        <li key={featureIndex} className="check-icon">
-                                                            {feature}
+                                                        <li key={featureIndex} className="check-icon" ref={el => featureRef.current[`${index}-${featureIndex}`] = el}>
+                                                            {feature.name}
+                                                            <button className='descButton'
+                                                                onClick={() => handleFeatureClick(index, featureIndex)}
+                                                            >
+                                                                ?
+                                                            </button>
+                                                            {clickedFeature === `${index}-${featureIndex}` && (
+                                                                <div className="feature-popup show-popup">
+                                                                    {feature.description}
+                                                                </div>
+                                                            )}
                                                         </li>
                                                     ))}
                                                 </ul>
+
                                             </div>
                                         </div>
                                     </div>
