@@ -1,79 +1,11 @@
-/* AboutUs.css .aboutUs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.aboutUsContent {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logoContainer {
-    margin-bottom: 10px;
-}
-
-.desktopAbout .aboutUs h2 {
-    color: #000;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px;
-}
-
-
-.desktopAbout .titleContainer {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.desktopAbout .textGroup {
-    display: flex;
-    align-items: center;
-}
-
-.desktopAbout .textGroup h2 {
-    margin: 0;
-    padding: 0 10px;
-}
-
-.greenText {
-    color: #63BF99;
-}
-
-.mobileAbout .greenText {
-    color: #63BF99;
-    margin-top: -5px !important;
-}
-
-.desktopAbout .textContainer {
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.mobileAbout .textContainer {
-    padding: 20px;
-
-} */
-
 .aboutUs {
     display: flex;
     justify-content: center;
     /* align-items: center; */
     /* height: 100vh; */
 }
+
+
 
 .aboutUsContent {
     text-align: center;
@@ -96,48 +28,7 @@
     margin-bottom: 10px;
 }
 
-/* .desktopAbout .aboutUs h2 {
-    color: #000;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 70px;
-} */
 
-
-/* .desktopAbout .titleContainer {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-} */
-
-/* .desktopAbout .textGroup {
-    display: flex;
-    align-items: center;
-} */
-
-/* .desktopAbout .textGroup h2 {
-    margin: 0;
-    padding: 0 10px;
-} */
-
-/* .greenText {
-    color: #63BF99;
-    font-weight: bolder;
-} */
-
-/* .desktopAbout .textContainer {
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-} */
 
 .desktopAbout .subtitle {
     color: #63BF99 !important;
@@ -267,4 +158,13 @@
 .desktopAbout {
     margin-top: 100px;
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktopAbout .aboutUsDetailed .row img {
+    /* width: -webkit-fill-available; */
+    width: fit-content(stretch);
 }

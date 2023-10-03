@@ -1,32 +1,36 @@
 .desktopPricing .pricing-table {
     padding: 0px 0px 40px 0px;
-    /* margin: 0 auto; */
-    /* margin-bottom: 5px; */
-    /* border: transparent; */
-    /* text-align: center; */
     background-color: #FFFFFF;
-    /* border: 1px solid #f1f1f1; */
     transition: all 0.3s;
-
     border-radius: 35px;
     border: 5px solid #66C09F;
     background: #FFF;
-    /* box-shadow: 30px 20px 10px 0px #86C0D8; */
     width: 480px;
     height: 1370px;
     margin: 0 10px;
-    /* Adjust the margin value as needed */
 
 
 }
 
 .mobilePricing .pricing-table {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
-
+    padding: 0px 0px 40px 0px;
+    background-color: #FFFFFF;
+    transition: all 0.3s;
+    border-radius: 35px;
+    border: 5px solid #66C09F;
+    background: #FFF;
+    /* width: 480px; */
+    /* height: 1370px; */
+    margin: 0 10px;
 }
 
+/* .mobilePricing .pricing-table {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 
-.pricing-table .pricing-details .descriptionP {
+} */
+
+
+.desktopPricing .pricing-table .pricing-details .descriptionP {
     color: #000;
     font-size: 17px;
     font-style: normal;
@@ -37,7 +41,18 @@
     height: 250px;
 }
 
-.pricing-table .pricing-details .subscriptionP {
+.mobilePricing .pricing-table .pricing-details .descriptionP {
+    color: #000;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-left: 10px;
+    padding-right: 30px;
+    /* height: 250px; */
+}
+
+.desktopPricing .pricing-table .pricing-details .subscriptionP {
     color: #7C7C7C;
     font-size: 17px;
     font-style: normal;
@@ -48,11 +63,21 @@
 
 }
 
+.mobilePricing .pricing-table .pricing-details .subscriptionP {
+    color: #7C7C7C;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 12px; */
+    margin-left: 10px;
+    padding-right: 30px;
 
-.healthlite h3 {
+}
+
+
+.desktopPricing .healthlite h3 {
     font-size: 50px;
     font-weight: 700;
-    /* margin-bottom: 20px; */
     text-transform: uppercase;
     padding-top: 40px;
     padding-left: 30px;
@@ -68,9 +93,22 @@
 
 }
 
+.mobilePricing .healthlite h3 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-left: 15px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    color: #EFAC5D;
+    font-style: normal;
+    line-height: 70px;
+}
 
 
-.healthlite h1 {
+
+.desktopPricing .healthlite h1 {
     color: #EFAC5D;
     font-size: 80px;
     font-style: normal;
@@ -81,9 +119,19 @@
 
 }
 
+.mobilePricing .healthlite h1 {
+    color: #EFAC5D;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 40px;
 
 
-.healthlite h1::before {
+}
+
+
+
+.desktopPricing .healthlite h1::before {
     content: attr(data-before);
     color: #EFAC5D;
     font-size: 80px;
@@ -92,7 +140,26 @@
     line-height: 70px;
 }
 
-.pricing-table .pricing-details h1::after {
+.mobilePricing .healthlite h1::before {
+    content: attr(data-before);
+    color: #EFAC5D;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.desktopPricing .pricing-table .pricing-details h1::after {
+    content: "/mo";
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+
+}
+
+.mobilePricing .pricing-table .pricing-details h1::after {
     content: "/mo";
     color: #000;
     font-size: 30px;
@@ -103,7 +170,7 @@
 }
 
 
-.pricing-table .pricing-details span {
+.desktopPricing .pricing-table .pricing-details span {
     color: #000;
     font-size: 25px;
     font-style: normal;
@@ -112,15 +179,15 @@
     padding-left: 30px;
 }
 
-/* .pricing-table .pricing-details span {
+.mobilePricing .pricing-table .pricing-details span {
     color: #000;
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
     line-height: 70px;
     padding-left: 30px;
+}
 
-} */
 
 
 
@@ -128,13 +195,19 @@
     height: 1570px;
 }
 
-.pricing-table .pricing-details ul {
+.desktopPricing .pricing-table .pricing-details ul {
     margin-bottom: 35px;
     list-style-type: none;
 
 }
 
-.pricing-table .pricing-details ul li {
+.mobilePricing .pricing-table .pricing-details ul {
+    margin-bottom: 35px;
+    list-style-type: none;
+
+}
+
+.desktopPricing .pricing-table .pricing-details ul li {
     color: #000;
     font-size: 15px;
     font-style: normal;
@@ -149,7 +222,23 @@
     display: flex;
 }
 
-.healthlite .plan-button {
+.mobilePricing .pricing-table .pricing-details ul li {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    /* line-height: 30px; */
+    background-image: url('../img/check.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    padding-right: 10px;
+}
+
+.desktopPricing .healthlite .plan-button {
     width: 350px;
     height: 88px;
     border-radius: 43px;
@@ -159,7 +248,20 @@
 
 }
 
-.plan-button a {
+.mobilePricing .healthlite .plan-button {
+    /* width: 350px; */
+    /* height: 88px; */
+    border-radius: 43px;
+    background: linear-gradient(50deg, #EFAC5D 32.09%, #FFF 166.03%);
+    /* margin-left: 30px; */
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+}
+
+.desktopPricing .plan-button a {
     color: #FFF;
     font-size: 35px;
     font-style: normal;
@@ -169,18 +271,37 @@
 
 }
 
-.section-subtitle {
+.mobilePricing .plan-button a {
+    color: #FFF;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px;
+    margin-left: 25%;
+
+}
+
+.desktopPricing .section-subtitle {
     color: #000;
     font-size: 70px;
     font-style: normal;
     font-weight: 700;
     line-height: 70px;
-    /* max-width: 900px; */
     margin-bottom: 50px;
     margin-left: 15px;
 }
 
-.decidePlan {
+.mobilePricing .section-subtitle {
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+}
+
+.desktopPricing .decidePlan {
     width: 404px;
     height: 113px;
     border-radius: 17px;
@@ -192,7 +313,19 @@
     margin-left: 15%;
 }
 
-.decidePlan .monthly {
+.mobilePricing .decidePlan {
+    /* width: 404px; */
+    height: 113px;
+    border-radius: 17px;
+    background: linear-gradient(90deg, #87C0DA 0%, #65C09D 100%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    /* margin-left: 15%; */
+}
+
+.desktopPricing .decidePlan .monthly {
     width: 179px;
     height: 79px;
     border-radius: 17px;
@@ -206,7 +339,21 @@
 
 }
 
-.decidePlan .yearly {
+.mobilePricing .decidePlan .monthly {
+    width: 179px;
+    height: 79px;
+    border-radius: 17px;
+    background: #FFF;
+    border: none;
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+
+}
+
+.desktopPricing .decidePlan .yearly {
     width: 179px;
     height: 79px;
     border-radius: 17px;
@@ -221,10 +368,24 @@
 
 }
 
-.healthpro h3 {
+.mobilePricing .decidePlan .yearly {
+    width: 179px;
+    height: 79px;
+    border-radius: 17px;
+    border: 2px solid #FFF;
+    background: #83C0D8;
+    justify-content: center;
+    color: #FFF;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+
+}
+
+.desktopPricing .healthpro h3 {
     font-size: 50px;
     font-weight: 700;
-    /* margin-bottom: 20px; */
     text-transform: uppercase;
     padding-top: 40px;
     padding-left: 30px;
@@ -240,9 +401,24 @@
 
 }
 
+.mobilePricing .healthpro h3 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-left: 15px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    color: #63BF99;
+    font-size: 50px;
+    font-style: normal;
+    line-height: 70px;
+}
 
 
-.healthpro h1 {
+
+
+.desktopPricing .healthpro h1 {
     color: #63BF99;
     font-size: 80px;
     font-style: normal;
@@ -253,9 +429,20 @@
 
 }
 
+.mobilePricing .healthpro h1 {
+    color: #63BF99;
+    /* font-size: 80px; */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 40px;
 
 
-.healthpro h1::before {
+}
+
+
+
+.desktopPricing .healthpro h1::before {
     content: attr(data-before);
     color: #63BF99;
     font-size: 80px;
@@ -264,7 +451,16 @@
     line-height: 70px;
 }
 
-.healthpro .plan-button {
+.mobilePricing .healthpro h1::before {
+    content: attr(data-before);
+    color: #63BF99;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.desktopPricing .healthpro .plan-button {
     width: 350px;
     height: 88px;
     border-radius: 43px;
@@ -273,10 +469,20 @@
     margin-top: 40px;
 }
 
-.healthplus h3 {
+.desktopPricing .healthpro .plan-button {
+    /* width: 350px;
+    height: 88px; */
+    border-radius: 43px;
+    background: linear-gradient(50deg, #63BF99 32.09%, #FFF 166.03%);
+    /* margin-left: 30px; */
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.desktopPricing .healthplus h3 {
     font-size: 50px;
     font-weight: 700;
-    /* margin-bottom: 20px; */
     text-transform: uppercase;
     padding-top: 40px;
     padding-left: 30px;
@@ -292,9 +498,27 @@
 
 }
 
+.mobilePricing .healthplus h3 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 40px;
+
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    color: #84C0D5;
+    font-size: 50px;
+    font-style: normal;
+    line-height: 70px;
+    /* text-align: left;
+    margin-left: 10px; */
 
 
-.healthplus h1 {
+}
+
+
+
+.desktopPricing .healthplus h1 {
     color: #84C0D5;
     font-size: 80px;
     font-style: normal;
@@ -305,9 +529,19 @@
 
 }
 
+.mobilePricing .healthplus h1 {
+    color: #84C0D5;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    padding-left: 40px;
 
 
-.healthplus h1::before {
+}
+
+
+
+.desktopPricing .healthplus h1::before {
     content: attr(data-before);
     color: #84C0D5;
     font-size: 80px;
@@ -316,7 +550,16 @@
     line-height: 70px;
 }
 
-.healthplus .plan-button {
+.mobilePricing .healthplus h1::before {
+    content: attr(data-before);
+    color: #84C0D5;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.desktopPricing .healthplus .plan-button {
     width: 350px;
     height: 88px;
     border-radius: 43px;
@@ -326,48 +569,31 @@
 
 }
 
-/* .feature-popup {
-    position: absolute;
-    background-color: white;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    z-index: 10;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    display: none;
-} */
+.desktopPricing .healthplus .plan-button {
+    /* width: 350px;
+    height: 88px; */
+    border-radius: 43px;
+    background: linear-gradient(50deg, #84C0D5 32.09%, #FFF 166.03%);
+    margin-top: 40px;
+    /* margin-left: 30px; */
+    margin-left: 10px;
+    margin-right: 10px;
 
-/* li.check-icon {
+}
+
+
+
+.desktopPricing li.check-icon {
     position: relative;
+
 }
 
-.feature-popup {
-    position: absolute;
-    background-color: white;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    z-index: 10;
-    left: calc(100% + 10px);
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
-    display: none;
-}
-
-.show-popup {
-    display: block;
-} */
-
-li.check-icon {
+.mobilePricing li.check-icon {
     position: relative;
-    /* display: inline-flex; */
 
 }
 
-.feature-popup {
+.desktopPricing .feature-popup {
     position: absolute;
     background-color: white;
     padding: 8px;
@@ -381,11 +607,29 @@ li.check-icon {
     left: 62%;
 }
 
-.show-popup {
+.mobilePricing .feature-popup {
+    position: absolute;
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    /* width: 200px; */
+    display: none;
+    /* left: 62%; */
+}
+
+.desktopPricing .show-popup {
     display: block;
 }
 
-.descButton {
+.mobilePricing .show-popup {
+    display: block;
+}
+
+.desktopPricing .descButton {
 
     width: 25px;
     height: 25px;
@@ -399,4 +643,24 @@ li.check-icon {
     align-items: center;
     margin-left: 5px;
     cursor: pointer;
+}
+
+.mobilePricing .descButton {
+
+    width: 25px;
+    height: 25px;
+    fill: #FFF;
+    stroke-width: 1px;
+    border-color: #84C0D5;
+    background: none !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.desktopPricing {
+    padding-top: 100px;
 }

@@ -97,7 +97,7 @@ const Pricing = () => {
                                                 </div>
 
                                                 <div className={`plan-button ${plan.title.toLowerCase()}-button`}>
-                                                    <a href="#" className="btn btn-common">
+                                                    <a href="#contactId" className="btn btn-common">
                                                         Get Plan
                                                     </a>
                                                 </div>
@@ -141,61 +141,79 @@ const Pricing = () => {
                 <div className='mobilePricing'>
                     <div id="pricing" className="section pricing-section">
                         <div className="container">
-                            <div className="section-header">
-                                <h2 className="section-title">Pricing Table</h2>
-
-                                <p className="section-subtitle">Choose A Plan That's
-                                    Right For You.</p>
+                            <div className="container1">
+                                <div className="row">
+                                    <div className="col-md-8">
+                                        <div className="section-header">
+                                            <p className="section-subtitle">Choose A Plan That's Right For You.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <div className="toggle-buttons decidePlan">
+                                            <button
+                                                className={`toggle-button ${selectedPlan === 'monthly' ? 'active' : ''} monthly`}
+                                                onClick={() => togglePlan('monthly')}
+                                            >
+                                                Monthly
+                                            </button>
+                                            <button
+                                                className={`toggle-button ${selectedPlan === 'yearly' ? 'active' : ''} yearly`}
+                                                onClick={() => togglePlan('yearly')}
+                                            >
+                                                Yearly
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
+
                             <div className="row pricing-tables">
-                                <div className="col-md-4 col-sm-6 col-xs-12">
-                                    <div className="pricing-table">
-                                        <div className="pricing-details">
-                                            <h3>200$</h3>
-                                            <span>BASIC</span>
-                                            <ul>
-                                                <li>Consectetur adipiscing</li>
-                                                <li>Nunc luctus nulla et tellus</li>
-                                                <li>Suspendisse quis metus</li>
-                                                <li>Vestibul varius fermentum erat</li>
-                                            </ul>
+                                {plansToRender.map((plan, index) => (
+                                    <div key={index} className="col-md-4 col-sm-6 col-xs-12">
+                                        <div className="pricing-table">
+                                            <div className={`pricing-details ${plan.title.toLowerCase()}`}>
+                                                <h3>{plan.title}</h3>
+                                                <p className='descriptionP'>{plan.description}.</p>
+                                                <h1 data-before={`${plan.pricing}€`}></h1>
+                                                <div className='subscriptionP'>
+                                                    {plan.subscription.split("\n").map((line, idx) => (
+                                                        <p key={idx}>{line}</p>
+                                                    ))}
+                                                </div>
+
+                                                <div className={`plan-button ${plan.title.toLowerCase()}-button`}>
+                                                    <a href="#" className="btn btn-common">
+                                                        Get Plan
+                                                    </a>
+                                                </div>
+                                                <span>Top Features</span>
+                                                <ul>
+                                                    {plan.pricefeature.map((feature, featureIndex) => (
+                                                        <li key={featureIndex} className="check-icon" ref={el => featureRef.current[`${index}-${featureIndex}`] = el}>
+                                                            {feature.fp_title}
+
+                                                            {feature.fp_description !== "No Description" && (
+                                                                <button className='descButton'
+                                                                    onClick={() => handleFeatureClick(index, featureIndex)}
+                                                                >
+                                                                    ?
+                                                                </button>
+                                                            )}
+
+                                                            {clickedFeature === `${index}-${featureIndex}` && (
+                                                                <div className="feature-popup show-popup">
+                                                                    {feature.fp_description}
+                                                                </div>
+                                                            )}
+                                                        </li>
+                                                    ))}
+
+                                                </ul>
+                                            </div>
                                         </div>
-
                                     </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="pricing-table">
-                                        <div class="pricing-details">
-                                            <h3>500$</h3>
-                                            <span>ADVANCED</span>
-                                            <ul>
-                                                <li>Consectetur adipiscing</li>
-                                                <li>Nunc luctus nulla et tellus</li>
-                                                <li>Suspendisse quis metus</li>
-                                                <li>Vestibul varius fermentum erat</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 col-sm-6 col-xs-12">
-                                    <div class="pricing-table">
-                                        <div class="pricing-details">
-                                            <h3>800$</h3>
-                                            <span>Team</span>
-                                            <ul>
-                                                <li>Consectetur adipiscing</li>
-                                                <li>Nunc luctus nulla et tellus</li>
-                                                <li>Suspendisse quis metus</li>
-                                                <li>Vestibul varius fermentum erat</li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
+                                ))}
 
                             </div>
                         </div>
