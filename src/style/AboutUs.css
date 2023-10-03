@@ -123,6 +123,9 @@
 .mobileAbout .aboutUsDetailed {
     margin-top: 20px;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mobileAbout .mobileText {
@@ -151,7 +154,7 @@
 }
 
 .mobileAbout .mobileImage {
-    padding-left: 22px;
+    padding-left: 29px;
 
 }
 

@@ -190,14 +190,20 @@
 
 
 
+.pricing-details {
+    padding: 5px
+}
 
 .desktopPricing .pricing-section {
     height: 1570px;
+
 }
 
 .desktopPricing .pricing-table .pricing-details ul {
     margin-bottom: 35px;
     list-style-type: none;
+    padding-right: 45px;
+
 
 }
 
