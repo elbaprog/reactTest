@@ -1,6 +1,6 @@
 .footer .desktopFooter {
     background-color: rgba(135, 192, 218, 0.40);
-    width: 1920px;
+    /* width: 1920px; */
     height: 134px;
     text-align: center;
     display: flex;

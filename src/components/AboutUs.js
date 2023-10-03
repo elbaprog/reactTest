@@ -4,6 +4,8 @@ import medLogo from "../img/medLogo.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import banner from "../img/banner.png";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from '../img/banner.png';
 
 const baseURL = "https://progboard.app-med.com/api/abouts";
 // const baseURL = "http://192.168.1.48:8005/api/abouts";
@@ -50,7 +52,7 @@ const AboutUs = () => {
                                     <>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 odd'>
 
-                                            <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='evenImg' />
+                                            <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='evenImg' style={{ width: '-webkit-fill-available' }} />
                                         </div>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 textOfOdd'>
                                             <h2>{item.title}</h2>
@@ -64,7 +66,7 @@ const AboutUs = () => {
                                             <p>{item.description}</p>
                                         </div>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 even'>
-                                            <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='oddImg' />
+                                            <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='oddImg' style={{ width: '-webkit-fill-available' }} />
                                         </div>
                                     </>
                                 )}

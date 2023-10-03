@@ -1,13 +1,13 @@
 .contact .desktopContact {
     position: relative;
-    width: 1920px;
+    /* width: 1920px; */
     height: 1120px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: #E0E0E0;
-    width: 1920px;
+    /* width: 1920px; */
 }
 
 .contact .mobileContact {
