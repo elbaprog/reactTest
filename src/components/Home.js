@@ -3,6 +3,7 @@ import banner from "../img/banner.png";
 import '../style/Home.css';
 import { TypeAnimation } from 'react-type-animation';
 import MediaQuery from 'react-responsive';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = () => {
 

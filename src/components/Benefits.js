@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import medLogo from "../img/medLogo.png";
 import BenefitMobile from './BenefitMobile'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const baseURL = "https://progboard.app-med.com/api/benefits";
 const infoURL = "https://progboard.app-med.com/api/infos";

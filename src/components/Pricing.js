@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../style/Pricing.css'
 import MediaQuery from 'react-responsive';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Pricing = () => {
     const [data, setData] = useState([]);
     const [selectedPlan, setSelectedPlan] = useState('monthly');

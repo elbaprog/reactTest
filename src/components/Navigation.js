@@ -4,7 +4,7 @@ import '../style/Navbar.css';
 import MediaQuery from 'react-responsive';
 import logoWhite from "../img/logoWhite.png";
 import AppMed from "../img/appmed.png";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

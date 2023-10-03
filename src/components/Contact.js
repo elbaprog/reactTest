@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import ContactBar from './ContactBar';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Contact = () => {
 
 

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const baseUrl = 'https://progboard.app-med.com/api/contact';
 const ContactForm = () => {

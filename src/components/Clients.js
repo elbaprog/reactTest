@@ -4,6 +4,7 @@ import Avicena from "../img/avicena.png";
 import Pinea from "../img/pinea.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const baseURL = "https://progboard.app-med.com/api/clients";
 

@@ -6,6 +6,7 @@ import 'react-social-icons/facebook'
 import 'react-social-icons/instagram'
 import 'react-social-icons/linkedin'
 import AppMed from '../img/appmed.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
     return (

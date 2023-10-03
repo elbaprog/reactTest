@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../style/Services.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const baseURL = "https://progboard.app-med.com/api/services";
 

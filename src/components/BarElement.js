@@ -1,5 +1,6 @@
 import React from 'react';
 import AppMed from '../img/appmed.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
 const BarElement = () => {
     return (
         <div className="section" id="sectionId">

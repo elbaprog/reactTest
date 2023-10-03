@@ -3,8 +3,8 @@ import '../style/Services.css';
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import ServiceMobile from './ServiceMobile'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// const baseURL = "https://progboard.app-med.com/api/features";
 const baseURL = "https://progboard.app-med.com/api/services";
 const Services = () => {
     const [servicesData, setServicesData] = useState([]);

@@ -4,6 +4,7 @@ import Laptop from "../img/laptopi.png";
 import DemoIcon from "../img/demo.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const baseURL = "https://progboard.app-med.com/api/infos";
 
