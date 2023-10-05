@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     /* width: 1919px; */
-    height: 1120px;
+    /* height: 1120px; */
 }
 
 .demo .mobileDemo {
@@ -24,7 +24,7 @@
 
 .demo .desktopDemo img {
     width: 1009px;
-    height: 738px;
+    /* height: 738px; */
     margin-left: 25%;
 }
 
@@ -54,7 +54,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-right: 60% !important;
+    line-height: normal;
+    margin-left: 10rem;
     margin-top: 0px !important;
 
 }

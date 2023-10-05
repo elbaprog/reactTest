@@ -30,8 +30,8 @@ const Demo = () => {
             <MediaQuery minDeviceWidth={768}>
                 <div className='desktopDemo'>
                     <div className='row'>
-                        <div className="col-md-6 col-sm-6"><img src={`https://progboard.app-med.com/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div>
-                        <div className="col-md-6 col-sm-6"> <h2> {demoData.demo_title} </h2> </div>
+                        {/* <div className="col-md-6 col-sm-6"><img src={`https://progboard.app-med.com/storage/${demoData.icon}`} alt="DemoIcon" className='demoIcon' /> </div> */}
+                        <div className="col-12"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
                     <p>{demoData.demo_description}</p>
                     <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" />

@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../style/Pricing.css'
+import '../style/Pricing.css';
 import MediaQuery from 'react-responsive';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Pricing = () => {
     const [data, setData] = useState([]);
     const [selectedPlan, setSelectedPlan] = useState('monthly');
@@ -9,7 +10,7 @@ const Pricing = () => {
     const featureRef = useRef([]);
 
     const baseURL = "https://progboard.app-med.com/api/pricings";
-
+    const isMobile = window.innerWidth <= 767;
 
     useEffect(() => {
         fetch(baseURL)
@@ -23,24 +24,20 @@ const Pricing = () => {
     }, []);
 
     const handleFeatureClick = (planIndex, featureIndex) => {
-        const key = `${planIndex}-${featureIndex}`;
-        if (clickedFeature === key) {
-            setClickedFeature(null);
-        } else {
-            setClickedFeature(key);
+        if (isMobile) {
+            const key = `${planIndex}-${featureIndex}`;
+            if (clickedFeature === key) {
+                setClickedFeature(null);
+            } else {
+                setClickedFeature(key);
+            }
         }
     }
 
 
-    const plansToRender = data.filter(plan => plan.plan.toLowerCase() === selectedPlan);
-
-    const togglePlan = (planType) => {
-        setSelectedPlan(planType);
-    };
-
     useEffect(() => {
         function handleClickOutside(event) {
-            if (clickedFeature !== null && !featureRef.current[clickedFeature].contains(event.target)) {
+            if (isMobile && clickedFeature !== null && !featureRef.current[clickedFeature].contains(event.target)) {
                 setClickedFeature(null);
             }
         }
@@ -48,6 +45,12 @@ const Pricing = () => {
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [clickedFeature]);
+
+    const togglePlan = (planType) => {
+        setSelectedPlan(planType);
+    };
+
+    const plansToRender = data.filter(plan => plan.plan.toLowerCase() === selectedPlan);
 
 
     return (
@@ -116,11 +119,15 @@ const Pricing = () => {
                                                                 </button>
                                                             )}
 
-                                                            {clickedFeature === `${index}-${featureIndex}` && (
+                                                            {/* {clickedFeature === `${index}-${featureIndex}` && (
                                                                 <div className="feature-popup show-popup">
                                                                     {feature.fp_description}
                                                                 </div>
-                                                            )}
+                                                            )} */}
+                                                            <div className={clickedFeature === `${index}-${featureIndex}` ? "feature-popup show-popup" : "feature-popup"}>
+                                                                {feature.fp_description}
+                                                            </div>
+
                                                         </li>
                                                     ))}
 

@@ -69,9 +69,10 @@
 }
 
 .aboutUsDetailed .textOfOdd {
-    justify-content: center;
+    /* justify-content: center;
+    margin-top: 10%; */
+    margin-top: 9rem;
     text-align: left;
-    margin-top: 10%;
 
 }
 
@@ -97,7 +98,8 @@
 .aboutUsDetailed .textOfEven {
     justify-content: center;
     text-align: left;
-    margin-top: 10%;
+    margin-top: 9rem;
+
 
 }
 

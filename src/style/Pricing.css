@@ -80,7 +80,7 @@
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 40px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
     color: #EFAC5D;
@@ -114,7 +114,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 70px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
 
 
 }
@@ -176,7 +176,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 70px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
 }
 
 .mobilePricing .pricing-table .pricing-details span {
@@ -195,7 +195,7 @@
 }
 
 .desktopPricing .pricing-section {
-    height: 1570px;
+    height: 1610px;
 
 }
 
@@ -223,9 +223,14 @@
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 30px;
-    margin-bottom: 10px;
+    padding: 0 30px 0 30px;
+    margin-bottom: 7px;
     display: flex;
+}
+
+
+.desktopPricing li.check-icon:hover .feature-popup {
+    display: block;
 }
 
 .mobilePricing .pricing-table .pricing-details ul li {
@@ -394,7 +399,7 @@
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 40px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
     color: #63BF99;
@@ -430,7 +435,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 70px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
 
 
 }
@@ -491,7 +496,7 @@
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 40px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
     color: #84C0D5;
@@ -530,7 +535,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 70px;
-    padding-left: 30px;
+    padding: 0 30px 0 30px;
 
 
 }
