@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'; import '../style/Client.css';
 import '../style/Demo.css';
-import Laptop from "../img/laptopi.png";
-import DemoIcon from "../img/demo.png";
+import Laptop from "../img/laptop.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -34,7 +33,8 @@ const Demo = () => {
                         <div className="col-12"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
                     <p>{demoData.demo_description}</p>
-                    <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" />
+                    {/* <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" /> */}
+                    <img src={Laptop} alt="" />
                 </div>
             </MediaQuery >
             <MediaQuery maxDeviceWidth={767}>
@@ -44,7 +44,7 @@ const Demo = () => {
                         <div className="col-md-4 col-sm-6"> <h2> {demoData.demo_title} </h2> </div>
                     </div>
                     <p>{demoData.demo_description}</p>
-                    <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" />
+                    {/* <img src={`https://progboard.app-med.com/storage/${demoData.image}`} alt="Laptop" /> */}
                 </div>
             </MediaQuery>
         </div>

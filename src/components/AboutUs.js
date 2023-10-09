@@ -5,7 +5,8 @@ import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import banner from "../img/banner.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from '../img/banner.png';
+import img1 from '../img/about/1.png';
+import img2 from '../img/about/2.png';
 
 const baseURL = "https://progboard.app-med.com/api/abouts";
 // const baseURL = "http://192.168.1.48:8005/api/abouts";
@@ -30,6 +31,12 @@ const AboutUs = () => {
 
     if (!aboutData) return null;
 
+    const imageMapping = {
+        1: img1,
+        2: img2,
+
+    };
+
     return (
         <div className="aboutUs" id="aboutId">
             <MediaQuery minDeviceWidth={768}>
@@ -52,7 +59,16 @@ const AboutUs = () => {
                                     <>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 odd'>
 
-                                            <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='evenImg' style={{ width: '-webkit-fill-available' }} />
+                                            {/* <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='evenImg' style={{ width: '-webkit-fill-available' }} /> */}
+                                            {/* <img
+                                                src={`https://progboard.app-med.com/public/storage/${item.image}`}
+                                                alt={item.title}
+                                                className='evenImg'
+                                                style={{ width: '-webkit-fill-available' }}
+                                            /> */}
+                                            <img src={imageMapping[item.id] || `../img/about/${item.id}.png`} alt={item.title} className='clientLogo' />
+
+
                                         </div>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 textOfOdd'>
                                             <h2>{item.title}</h2>
@@ -66,7 +82,8 @@ const AboutUs = () => {
                                             <p>{item.description}</p>
                                         </div>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 even'>
-                                            <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='oddImg' style={{ width: '-webkit-fill-available' }} />
+                                            {/* <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='oddImg' style={{ width: '-webkit-fill-available' }} /> */}
+                                            <img src={imageMapping[item.id] || `../img/about/${item.id}.png`} alt={item.title} className='clientLogo' />
                                         </div>
                                     </>
                                 )}

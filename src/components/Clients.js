@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'; import '../style/Client.css';
 import medLogo from "../img/medLogo.png";
-import Avicena from "../img/avicena.png";
-import Pinea from "../img/pinea.png";
+// import Avicena from "../img/avicena.png";
+// import Pinea from "../img/pinea.png";
 import MediaQuery from 'react-responsive';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import img1 from '../img/clients/1.png';
+import img2 from '../img/clients/2.png';
 
 const baseURL = "https://progboard.app-med.com/api/clients";
 
@@ -25,6 +27,12 @@ const Clients = () => {
 
     if (!clientsData) return null;
 
+    const imageMapping = {
+        1: img1,
+        2: img2,
+        // ... Add more mappings based on ID as needed
+    };
+
     const renderColumns = () => {
         const maxColumns = 2;
         const rows = [];
@@ -37,7 +45,9 @@ const Clients = () => {
                         <div class="col-lg-6 col-sm-6 col-xs-12 box-item" key={item.id}>
                             <div class="box-item">
                                 <span class="icon">
-                                    <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='clientLogo' />
+                                    {/* <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='clientLogo' /> */}
+                                    {/* <img src={`../img/${item.id}.png`} alt={item.title} className='clientLogo' /> */}
+                                    <img src={imageMapping[item.id] || `../img/clients/${item.id}.png`} alt={item.title} className='clientLogo' />
                                 </span>
                                 <div class="text">
                                     <p>{item.description}</p>

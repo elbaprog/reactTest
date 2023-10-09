@@ -6,6 +6,19 @@ import medLogo from "../img/medLogo.png";
 import BenefitMobile from './BenefitMobile'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import img1 from '../img/benefits/1.png';
+import img2 from '../img/benefits/2.png';
+import img3 from '../img/benefits/3.png';
+import img4 from '../img/benefits/4.png';
+import img5 from '../img/benefits/5.png';
+import img6 from '../img/benefits/6.png';
+import img7 from '../img/benefits/7.png';
+import img8 from '../img/benefits/8.png';
+import img9 from '../img/benefits/9.png';
+import img10 from '../img/benefits/10.png';
+import img11 from '../img/benefits/11.png';
+import img12 from '../img/benefits/12.png';
+
 const baseURL = "https://progboard.app-med.com/api/benefits";
 const infoURL = "https://progboard.app-med.com/api/infos";
 // const baseURL = "http://192.168.1.48:8005/api/benefits";
@@ -27,6 +40,22 @@ const Benefits = () => {
     const handleCloseButtonClick = () => {
         setShowBenefitMobile(false);
     };
+
+    const imageMapping = {
+        1: img1,
+        2: img2,
+        3: img3,
+        4: img4,
+        5: img5,
+        6: img6,
+        7: img7,
+        8: img8,
+        9: img9,
+        10: img10,
+        11: img11,
+        12: img12,
+    };
+
     useEffect(() => {
         axios.get(baseURL)
             .then((response) => {
@@ -62,7 +91,8 @@ const Benefits = () => {
                     {row.map(item => (
                         <div class="col-lg-4 col-sm-4 col-xs-6 box-item" key={item.id}>
                             <span class="icon">
-                                <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} />
+                                {/* <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} /> */}
+                                <img src={imageMapping[item.id] || `../img/benefits/${item.id}.png`} alt={item.title} />
                             </span>
                             <div class="text">
                                 <h4>{item.title}</h4>
