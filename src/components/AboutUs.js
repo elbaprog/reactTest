@@ -66,7 +66,9 @@ const AboutUs = () => {
                                                 className='evenImg'
                                                 style={{ width: '-webkit-fill-available' }}
                                             /> */}
-                                            <img src={imageMapping[item.id] || `../img/about/${item.id}.png`} alt={item.title} className='clientLogo' />
+                                            <img src={imageMapping[item.id] || `../img/about/${item.id}.png`} alt={item.title}
+                                                className='evenImg'
+                                                style={{ width: '-webkit-fill-available' }} />
 
 
                                         </div>
@@ -83,7 +85,7 @@ const AboutUs = () => {
                                         </div>
                                         <div className='col-lg-6 col-sm-6 col-xs-12 even'>
                                             {/* <img src={`https://progboard.app-med.com/storage/${item.image}`} alt={item.title} className='oddImg' style={{ width: '-webkit-fill-available' }} /> */}
-                                            <img src={imageMapping[item.id] || `../img/about/${item.id}.png`} alt={item.title} className='clientLogo' />
+                                            <img src={imageMapping[item.id] || `../img/about/${item.id}.png`} alt={item.title} className='oddImg' style={{ width: '-webkit-fill-available' }} />
                                         </div>
                                     </>
                                 )}
